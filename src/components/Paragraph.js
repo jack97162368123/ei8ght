@@ -24,7 +24,7 @@ const Paragraph = ({ text }) => {
 
     refs.current.forEach((ref, index) => {
       if (ref) {
-        const scene = new ScrollMagic.Scene({
+        new ScrollMagic.Scene({
           triggerElement: ref,
           reverse: false,
         })

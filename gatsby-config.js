@@ -6,7 +6,10 @@ module.exports = {
     title: `eight-web`,
   },
   flags: {
-    DEV_SSR: true,
+    FAST_DEV: true,
+    PRESERVE_FILE_DOWNLOAD_CACHE: true,
+    PARALLEL_SOURCING: true,
+    DETECT_NODE_MUTATIONS: true,
   },
   plugins: [
     `gatsby-plugin-netlify`,

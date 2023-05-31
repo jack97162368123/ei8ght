@@ -36,7 +36,7 @@ const FullWidthComponent = ({ svgImage }) => {
         transition: "opacity 0.5s, transform 0.5s",
       }}
     >
-      <img src={svgImage} alt="SVG Image" />
+      <img src={svgImage} alt="" />
     </div>
   );
 };
