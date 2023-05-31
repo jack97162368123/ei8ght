@@ -1,0 +1,12 @@
+/* Title.css */
+
+h1 {
+    font-size: 2rem;
+    color: #333;
+    margin: 1em 0;
+    padding: 1em;
+}
+
+.title-area {
+    grid-area: title;
+}

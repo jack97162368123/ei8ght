@@ -1,0 +1,9 @@
+/* styles/textcomponent.css */
+
+.text-component {
+    width: 50%;
+    margin-left: 50%;
+  }
+  
+
+  @import 'swiper/swiper-bundle.min.css';

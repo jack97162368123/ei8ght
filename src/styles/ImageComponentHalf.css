@@ -1,0 +1,41 @@
+.grid-item-half.image-half {
+    grid-column: span 2;
+    grid-area: image;
+    position: sticky;   /* change position to sticky */
+    top: 0;  /* distance from the top of the viewport */
+    opacity: 0;
+    transform: translateY(50%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  
+  .image-container-half {
+    position: relative;
+    width: auto;
+    height: 100%;
+    display: flex;
+  }
+  
+  .image-container-half::before {
+    content: "";
+    display: block;
+    height: auto;
+  }
+  
+  .image-container-half img {
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .grid-item-half.image-half {
+      grid-column: auto;
+    }
+  }
+  

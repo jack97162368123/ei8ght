@@ -1,0 +1,23 @@
+/* Paragraph.css */
+
+.paragraph {
+  padding: 1em;
+  color: #ffffff;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  line-height: 150%;
+  opacity: 0;  
+}
+
+.paragraph-area {
+  grid-area: paragraph;
+}
+.bg-color {
+  background-color: #303d4e80;
+  position: relative;
+  z-index: -1;
+}

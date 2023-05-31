@@ -1,0 +1,46 @@
+.carousel-slide {
+    position: relative;
+  }
+  
+  .slide-title {
+    position: relative;
+    top: 0; /* Adjust the value to position the title vertically */
+    transform: translateY(-50%);
+    left: 0;
+    margin: auto;
+    width: 100%;
+    padding: 1rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: #303d4e80;
+    color: white;
+    box-sizing: border-box;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+
+
+  }
+  
+
+  
+  
+ .image{ display: flex; justify-content: center; align-items: center; }
+
+
+
+
+  .swiper-slide-content {
+    display:flexbox !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100% !important;
+    margin-top: 2rem; /* Add margin to the top */
+    margin-bottom: 2rem; /* Add margin to the bottom */
+  }
+  
+  .carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  

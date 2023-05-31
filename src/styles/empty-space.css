@@ -1,0 +1,6 @@
+.empty-space {
+    height: 100%;
+    width: 100%;
+    background-color: transparent; /* This can be set to any color you want, but for an invisible space, use 'transparent' */
+  }
+  
