@@ -33,9 +33,9 @@
 
 .eight-text p {
   display: flex;
-  justify-content: flex-end;  /* Align flex items to the start (left) */
+  justify-content: flex-end; /* Align flex items to the start (left) */
   flex-direction: column;
-  text-align: left;  /* Align text to the left */
+  text-align: left; /* Align text to the left */
   height: 100vh;
   font-size: 9vw; /* Adjust as needed */
   font-weight: bold; /* Make the text bold */
@@ -45,7 +45,7 @@
   word-wrap: break-word;
   hyphens: auto;
   margin: 0;
-  padding: 0 0 50px 0; /* Top, right, bottom, left */
+  padding: 0 0 10px 0; /* Top, right, bottom, left */
   box-sizing: border-box;
 }
 
