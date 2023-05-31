@@ -20,10 +20,14 @@
   .grid-container {
     grid-template-columns: 1fr;
     width: 100%;
+    max-width: 100%;
+
     margin-left: 0;
   }
 
   .right-column, .left-column {
     grid-column: auto;
+    max-width: 100%;
+
   }
 }
