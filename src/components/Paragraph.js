@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import { gsap } from 'gsap';
 import { ScrollMagicPluginGsap } from 'scrollmagic-plugin-gsap';
-import '../styles/Paragraph.css';
+import '../styles/paragraph.css';
 
 let ScrollMagic;
 
