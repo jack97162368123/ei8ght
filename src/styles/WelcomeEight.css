@@ -11,6 +11,7 @@
   background-color: #303d4e; /* Adjust as needed */
   display: inline-flex;
   height: auto;
+  max-width: 100%;
   padding: 1rem; /* Adjust as needed */
 }
 
