@@ -34,8 +34,8 @@ const ExperienceLogos = () => {
       {images.map((image, index) => (
         <SwiperSlide key={image.id}>
           <div className="swiper-slide-content">
-                  <h3 className="slide-title">Slide {index + 1} Title</h3>
-            <div className="image"> 
+            <h3 className="slide-title">Slide {index + 1} Title</h3>
+            <div className="image">
               <GatsbyImage image={getImage(image)} alt="Logo" />
             </div>
           </div>

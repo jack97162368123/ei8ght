@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import EightLogo from '../images/8_Logo.svg'; // replace this with your logo path
-import CustomHamburgerIcon from '../images/burger-menu-svgrepo-com.svg'; // replace this with your custom hamburger icon path
+import EightLogo from '/static/8_Logo.svg'; // replace this with your logo path
+import CustomHamburgerIcon from '/static/burger-menu-svgrepo-com.svg'; // replace this with your custom hamburger icon path
 
 const NavBar = () => {
   const [showMenu, setShowMenu] = useState(false);
