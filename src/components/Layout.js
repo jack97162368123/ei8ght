@@ -65,7 +65,7 @@ const Layout = ({
         </div>
 
         {imageColumn === "left" && (
-          <div className="right-column">
+          <div className="left-column">
             <ImageComponentHalf src={Happy} alt="Alistair Turner" />
           </div>
         )}
@@ -127,7 +127,7 @@ const Layout = ({
         </div>
 
         {imageColumn === "left" && (
-          <div className="left-column">
+          <div className="right-column">
             <ImageComponent src={AlistairTurnerImage} alt="Alistair Turner" />
           </div>
         )}
