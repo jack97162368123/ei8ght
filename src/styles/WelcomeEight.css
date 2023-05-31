@@ -58,13 +58,14 @@
     /* Existing styles for welcome-text p */
     font-size: 20vw;  /* You can change this value based on your preference */
     padding: 0;
+    height: 100vh;
     margin-bottom: auto; /* Align to the bottom */
     max-width: 100vw;
   }
 
   .eight-text p {
     padding: 20px;
-    height: auto;
+    height: 100vh;
     font-size: 20vw;
     text-align: left; /* Align the text to the left */
     margin-bottom: auto; /* Align to the bottom */
