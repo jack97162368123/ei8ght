@@ -3,7 +3,7 @@ import Bg from "./Bg";
 import NavBar from "./NavBar";
 import Paragraph from "./Paragraph";
 import ImageComponent from "./ImageComponent";
-import FullWidthComponent from "./FullWidthComponent";
+import FullWidthComponent from ".//FullWidthComponent";
 import WelcomeComponent from "./WelcomeComponent";
 import EightComponent from "./EightComponent";
 import EmptySpace from "./EmptySpace";
@@ -13,17 +13,14 @@ import ImageComponentHalf from './ImageComponentHalf';
 import "../styles/layout.css";
 import "../styles/grid.css";
 
-import svgImage1 from "../images/mostexciting.svg";
-import svgImage2 from "../images/why-eight.svg";
-import svgImage3 from "../images/meet-the-team.svg";
-import svgImage4 from "../images/Experence.svg";
-import svgImage5 from "../images/Design&Branding.svg";
+import svgImage1 from "../../static/mostexciting.svg";
+import svgImage2 from "../../static/why-eight.svg";
+import meetTheTeamImage from '../../static/meet-the-team.svg';
+import svgImage4 from "../../static/Experence.svg";
+import svgImage5 from "../../static/Design&Branding.svg";
 
-
-// Import other SVG images as needed
-
-import AlistairTurnerImage from "../images/profile-shots/AlistairTurner.jpeg";
-import Happy from "../images/HalfPageImages/Happy.jpg";
+import AlistairTurnerImage from "../../static/AlistairTurner.jpeg";
+import Happy from "../../static/Happy.jpg";
 
 const Layout = ({
   paragraphColumn = "left",
@@ -91,7 +88,7 @@ const Layout = ({
         )}
 
         <div className="full-width-column" colSpan="2">
-          <FullWidthComponent svgImage={svgImage3} />{" "}
+          <FullWidthComponent svgImage={meetTheTeamImage} />{" "}
           {/* Use the desired SVG image */}
         </div>
 
