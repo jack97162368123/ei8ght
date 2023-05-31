@@ -4,7 +4,9 @@
 module.exports = {
   siteMetadata: {
     title: `eight-web`,
-    siteUrl: `https://www.yourdomain.tld`,
+  },
+  flags: {
+    DEV_SSR: true,
   },
   plugins: [
     `gatsby-plugin-sharp`,
@@ -18,4 +20,4 @@ module.exports = {
       },
     },
   ],
-}
+};

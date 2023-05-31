@@ -1,17 +1,25 @@
 import React, { useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import { gsap } from 'gsap';
-import ScrollMagic from 'scrollmagic';
-import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
+import { ScrollMagicPluginGsap } from 'scrollmagic-plugin-gsap';
 import '../styles/Paragraph.css';
 
-ScrollMagicPluginGsap(ScrollMagic, gsap);
+let ScrollMagic;
+
+if (typeof window !== 'undefined') {
+  ScrollMagic = require('scrollmagic');
+  ScrollMagicPluginGsap(ScrollMagic, gsap);
+}
 
 const Paragraph = ({ text }) => {
   const paragraphs = text.split('<br />').filter(line => line.trim() !== '');
   const refs = useRef([]);
 
   useEffect(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
     const controller = new ScrollMagic.Controller();
 
     refs.current.forEach((ref, index) => {
@@ -20,12 +28,12 @@ const Paragraph = ({ text }) => {
           triggerElement: ref,
           reverse: false,
         })
-          .setTween(gsap.from(ref, { duration: 0.3, opacity: 0, ease: "power1.in" }))
+          .setTween(gsap.from(ref, { duration: 0.3, opacity: 0, ease: 'power1.in' }))
           .addTo(controller)
-          .on("enter", () => {
+          .on('enter', () => {
             gsap.to(ref, { opacity: 1 });
           })
-          .on("leave", () => {
+          .on('leave', () => {
             gsap.to(ref, { opacity: 0 });
           });
       }
@@ -40,9 +48,9 @@ const Paragraph = ({ text }) => {
     <div className="grid-item right-column paragraph-area">
       <div className="bg-color">
         {paragraphs.map((item, index) => (
-          <p 
+          <p
             key={index}
-            ref={(el) => (refs.current[index] = el)} 
+            ref={el => (refs.current[index] = el)}
             dangerouslySetInnerHTML={{ __html: item }}
             className="paragraph"
           />
