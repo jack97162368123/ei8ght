@@ -25,6 +25,7 @@ html {
   font-family: 'Inter', sans-serif;
   border: none;
   outline: none;
+  z-index: 2;
 }
 
 .nav__logo {

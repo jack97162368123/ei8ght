@@ -10,6 +10,7 @@
 .welcome-bar {
   background-color: #303d4e; /* Adjust as needed */
   display: inline-flex;
+  height: auto;
   padding: 1rem; /* Adjust as needed */
 }
 
@@ -48,9 +49,18 @@
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .welcome-text p {
-    font-size: 16em;  /* You can change this value based on your preference */
-    padding: 0 0 20px 0; /* You can change this value based on your preference */
+    /* Existing styles for welcome-text p */
+    font-size: 20vw;  /* You can change this value based on your preference */
+    padding: 0 0 0 0; /* You can change this value based on your preference */
   }
+
+  .eight-text p {
+    padding: 20px;
+    height: auto;
+    font-size: 20vw;
+    text-align: right ; /* Add this rule to align the text to the left */
+  }
+  
 }
