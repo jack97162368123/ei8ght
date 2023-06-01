@@ -30,18 +30,24 @@ const ExperienceLogos = () => {
   const images = data.allFile.nodes;
 
   return (
+    <div className="swiperbg">
     <Swiper navigation pagination>
       {images.map((image, index) => (
+        
         <SwiperSlide key={image.id}>
           <div className="swiper-slide-content">
             <h3 className="slide-title">Slide {index + 1} Title</h3>
             <div className="image">
               <GatsbyImage image={getImage(image)} alt="Logo" />
             </div>
-          </div>
-        </SwiperSlide>
+            
+            </div>
+          </SwiperSlide>
+          
       ))}
-    </Swiper>
+      </Swiper>
+      
+      </div>
   );
 };
 

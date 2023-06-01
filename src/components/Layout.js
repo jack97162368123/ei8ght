@@ -9,6 +9,7 @@ import EightComponent from "./EightComponent";
 import EmptySpace from "./EmptySpace";
 import ExperienceLogos from "./ExperienceLogos";
 import ImageComponentHalf from './ImageComponentHalf';
+import FullWidthParagraph from './FullWidthParagraphComponent';
 
 import "../styles/layout.css";
 import "../styles/grid.css";
@@ -87,24 +88,23 @@ const Layout = ({
           </div>
         )}
 
+        
+
+        
         <div className="full-width-column" colSpan="2">
           <FullWidthComponent svgImage={meetTheTeamImage} />{" "}
           {/* Use the desired SVG image */}
         </div>
 
-        {imageColumn === "left" && (
+        
+
+
+        {paragraphColumn === "left" && (
           <div className="left-column">
-            <ImageComponent src={AlistairTurnerImage} alt="Alistair Turner" />
+            <Paragraph text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco </br> </br> laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in </br> </br> reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in </br> </br> reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.ore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident" />
           </div>
         )}
 
-        <div className="right-column">
-          <EmptySpace />
-        </div>
-
-        <div className="left-column">
-          <EmptySpace />
-        </div>
 
         {imageColumn === "left" && (
           <div className="right-column">
@@ -112,22 +112,39 @@ const Layout = ({
           </div>
         )}
 
+        <div className="left-column">
+          <EmptySpace />
+        </div>
+
+        <div className="right-column">
+          <EmptySpace />
+        </div>
+
         {imageColumn === "left" && (
           <div className="left-column">
             <ImageComponent src={AlistairTurnerImage} alt="Alistair Turner" />
           </div>
         )}
 
+<div className="left-column">
+          <EmptySpace />
+        </div>
+
+
+        {imageColumn === "left" && (
+          <div className="right-column">
+            <ImageComponent src={AlistairTurnerImage} alt="Alistair Turner" />
+          </div>
+        )}
+
+     
+
         <div className="right-column">
           <EmptySpace />
         </div>
 
-        <div className="left-column">
-          <EmptySpace />
-        </div>
-
         {imageColumn === "left" && (
-          <div className="right-column">
+          <div className="left-column">
             <ImageComponent src={AlistairTurnerImage} alt="Alistair Turner" />
           </div>
         )}
@@ -138,7 +155,9 @@ const Layout = ({
           {/* Use the desired SVG image */}
         </div>
 
-
+        <div className="full-width-column" colSpan="2">
+        <FullWidthParagraph text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in" />
+        </div>
 
 
         <div className="full-width-column" colSpan="2">

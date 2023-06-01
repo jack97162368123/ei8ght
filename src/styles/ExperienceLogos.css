@@ -1,5 +1,6 @@
 .carousel-slide {
     position: relative;
+    
   }
   
   .slide-title {
@@ -12,15 +13,20 @@
     padding: 1rem;
     font-weight: bold;
     text-align: center;
-    background-color: #303d4e80;
-    color: white;
+    /* background-color: #303d4e80; */
+    color: black;
     box-sizing: border-box;
     font-size: clamp(1.5rem, 2vw, 2rem);
 
 
   }
   
+.swiperbg{background-color: #ffffff;
+padding: 10vh;
 
+
+
+}
   
   
  .image{ display: flex; justify-content: center; align-items: center; }
@@ -35,6 +41,7 @@
     height: 100% !important;
     margin-top: 2rem; /* Add margin to the top */
     margin-bottom: 2rem; /* Add margin to the bottom */
+    
   }
   
   .carousel-container {
