@@ -29,8 +29,8 @@
     bottom: 0;
     
     width: 100%;
-    object-fit: cover;
-    height: auto;
+    object-fit: fill;
+    height: 100%;
   }
   
   @media (max-width: 768px) {
