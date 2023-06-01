@@ -4,21 +4,28 @@
   padding: 1em;
   color: #ffffff;
   font-size: clamp(1.2rem, 1.6vw, 1.6rem);
-
-
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 0;
   margin-right: 0;
   line-height: 150%;
-  opacity: 0;  
+  opacity: 0;
 }
 
 .paragraph-area {
   grid-area: paragraph;
 }
+
 .bg-color {
   background-color: #303d4e80;
   position: relative;
   z-index: -1;
 }
+
+@media screen and (max-width: 768px) {
+  .paragraph {
+    font-size: clamp(1.3rem, 5vw, 1.5rem);
+    padding: 1em;
+  }
+}
+
