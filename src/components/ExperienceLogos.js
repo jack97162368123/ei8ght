@@ -19,7 +19,6 @@ const ExperienceLogos = () => {
             childImageSharp {
               gatsbyImageData(
                 width: 200
-              
                 placeholder: BLURRED
                 formats: [AUTO, WEBP, AVIF]
               )
@@ -40,22 +39,31 @@ const ExperienceLogos = () => {
     return groups;
   }, {});
 
+  const directoryToTitle = {
+    "CompanyLogos/Venues": "Venues",
+    "CompanyLogos/SportingEvents": "Sporting Events",
+    "CompanyLogos/SportsFashion": "Sports Fashion",
+    // Add more mappings if needed
+  };
+
   return (
     <div className="swiperbg">
       {/* Create a separate Swiper carousel for each group of images */}
       {Object.entries(imagesByDirectory).map(([directory, images]) => (
-       <Swiper navigation pagination slidesPerView={3} loop={true} loopFillGroupWithBlank={true}>
-       {images.map((image) => (
-         <SwiperSlide key={image.node.id}>
-           <div className="swiper-slide-content">
-             <div className="image">
-               <GatsbyImage image={getImage(image.node)} alt="Logo" />
-             </div>
-           </div>
-         </SwiperSlide>
-       ))}
-     </Swiper>
-      
+        <div key={directory}>
+          <h2 className="carousel-title">{directoryToTitle[directory] || directory}</h2>
+          <Swiper navigation pagination slidesPerView={3} loop={true} loopFillGroupWithBlank={true}>
+            {images.map((image) => (
+              <SwiperSlide key={image.node.id}>
+                <div className="swiper-slide-content">
+                  <div className="image">
+                    <GatsbyImage image={getImage(image.node)} alt="Logo" />
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       ))}
     </div>
   );
