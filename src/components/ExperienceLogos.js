@@ -1,12 +1,12 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import SwiperCore, { Navigation, Pagination } from 'swiper';
+import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import '../styles/ExperienceLogos.css';
 
-SwiperCore.use([Navigation, Pagination]);
+SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 const ExperienceLogos = () => {
   const data = useStaticQuery(graphql`
@@ -52,7 +52,7 @@ const ExperienceLogos = () => {
       {Object.entries(imagesByDirectory).map(([directory, images]) => (
         <div key={directory}>
           <h2 className="carousel-title">{directoryToTitle[directory] || directory}</h2>
-          <Swiper navigation pagination slidesPerView={3} loop={true} loopFillGroupWithBlank={true}>
+          <Swiper navigation pagination slidesPerView={3} loop={true} loopFillGroupWithBlank={true} autoplay={{ delay: 3000, disableOnInteraction: false }}>
             {images.map((image) => (
               <SwiperSlide key={image.node.id}>
                 <div className="swiper-slide-content">
