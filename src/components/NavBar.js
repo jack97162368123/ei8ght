@@ -6,6 +6,7 @@ import '../styles/NavBar.css';
 const NavBar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [windowWidth, setWindowWidth] = useState(0);
+  const [animateIn, setAnimateIn] = useState(false); // new state variable
 
   useEffect(() => {
     const handleResize = () => {
@@ -13,19 +14,25 @@ const NavBar = () => {
     };
 
     setWindowWidth(window.innerWidth);
+
+    // animate in if window width is greater than 768
+    if (windowWidth > 768) {
+      setAnimateIn(true);
+    }
+
     window.addEventListener('resize', handleResize);
 
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [windowWidth]); // added windowWidth as a dependency
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
 
   return (
-    <nav className={`nav ${showMenu ? 'show' : ''}`}>
+    <nav className={`nav ${showMenu ? 'show' : ''} ${animateIn ? 'animate-in' : ''}`}>
       <div className="nav__logo">
         {windowWidth <= 768 && (
           <img src={EightLogo} alt="Logo" className="nav__logo-mobile" />
