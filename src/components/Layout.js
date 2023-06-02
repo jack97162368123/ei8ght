@@ -8,20 +8,21 @@ import WelcomeComponent from "./WelcomeComponent";
 import EightComponent from "./EightComponent";
 import EmptySpace from "./EmptySpace";
 import ExperienceLogos from "./ExperienceLogos";
-import ImageComponentHalf from './ImageComponentHalf';
-import FullWidthParagraph from './FullWidthParagraphComponent';
+import ImageComponentHalf from "./ImageComponentHalf";
+import FullWidthParagraph from "./FullWidthParagraphComponent";
 
 import "../styles/layout.css";
 import "../styles/grid.css";
 
 import svgImage1 from "../../static/mostexciting.svg";
 import svgImage2 from "../../static/why-eight.svg";
-import meetTheTeamImage from '../../static/meet-the-team.svg';
+import meetTheTeamImage from "../../static/meet-the-team.svg";
 import svgImage4 from "../../static/Experence.svg";
 import svgImage5 from "../../static/Design&Branding.svg";
 
 import AlistairTurnerImage from "../../static/AlistairTurner.jpeg";
 import Happy from "../../static/Happy.jpg";
+import TeamImage from "../../static/anna-samoylova-w55SpMmoPgE-unsplash.jpg";
 
 const Layout = ({
   paragraphColumn = "left",
@@ -53,8 +54,7 @@ const Layout = ({
           </div>
         )}
 
-
-{imageColumn === "left" && (
+        {imageColumn === "left" && (
           <div className="right-column">
             <ImageComponentHalf src={Happy} alt="Alistair Turner" />
           </div>
@@ -70,7 +70,7 @@ const Layout = ({
             <ImageComponentHalf src={Happy} alt="Alistair Turner" />
           </div>
         )}
-         {/* <div className="left-column">
+        {/* <div className="left-column">
           <EmptySpace />
         </div> */}
 
@@ -88,20 +88,20 @@ const Layout = ({
           </div>
         )}
 
-        
-
-        
         <div className="full-width-column" colSpan="2">
           <FullWidthComponent svgImage={meetTheTeamImage} />{" "}
           {/* Use the desired SVG image */}
         </div>
 
-        
-
-
         {paragraphColumn === "left" && (
           <div className="left-column">
             <Paragraph text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco </br> </br> laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in </br> </br> reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in </br> </br> reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.ore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident" />
+          </div>
+        )}
+
+{imageColumn === "left" && (
+          <div className="right-column">
+            <ImageComponentHalf src={TeamImage} alt="Meat the Team Image (Tug)" />
           </div>
         )}
 
@@ -126,18 +126,15 @@ const Layout = ({
           </div>
         )}
 
-<div className="left-column">
+        <div className="left-column">
           <EmptySpace />
         </div>
-
 
         {imageColumn === "left" && (
           <div className="right-column">
             <ImageComponent src={AlistairTurnerImage} alt="Alistair Turner" />
           </div>
         )}
-
-     
 
         <div className="right-column">
           <EmptySpace />
@@ -149,26 +146,29 @@ const Layout = ({
           </div>
         )}
 
-
-<div className="full-width-column" colSpan="2">
+        <div className="full-width-column" colSpan="2">
           <FullWidthComponent svgImage={svgImage4} />{" "}
           {/* Use the desired SVG image */}
         </div>
 
         <div className="full-width-column" colSpan="2">
-        <FullWidthParagraph text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in" />
+          <FullWidthParagraph text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in" />
         </div>
-
 
         <div className="full-width-column" colSpan="2">
-          <ExperienceLogos />
-        </div>
+  <ExperienceLogos />
+</div>
+
+
+
+        
+
+        
 
         <div className="full-width-column" colSpan="2">
           <FullWidthComponent svgImage={svgImage5} />{" "}
           {/* Use the desired SVG image */}
         </div>
-
 
         {children}
       </div>
