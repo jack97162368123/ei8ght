@@ -1,3 +1,4 @@
+// Purpose: Layout component for the website
 import React from "react";
 import Bg from "./Bg";
 import NavBar from "./NavBar";
@@ -10,26 +11,46 @@ import EmptySpace from "./EmptySpace";
 import ExperienceLogos from "./ExperienceLogos";
 import ImageComponentHalf from "./ImageComponentHalf";
 import FullWidthParagraph from "./FullWidthParagraphComponent";
+import FullWidthParagraphComponent from "./FullWidthParagraphComponent"; // the new import
+
+// import VerticalScrollCarousel from "./VerticalScrollCarousel";
+
+
+// Styles
 
 import "../styles/layout.css";
 import "../styles/grid.css";
+import 'swiper/swiper-bundle.css';
 
+
+// Brake Pages
 import svgImage1 from "../../static/mostexciting.svg";
 import svgImage2 from "../../static/why-eight.svg";
 import meetTheTeamImage from "../../static/meet-the-team.svg";
 import svgImage4 from "../../static/Experence.svg";
 import svgImage5 from "../../static/Design&Branding.svg";
 
-import AlistairTurnerImage from "../../static/AlistairTurner.jpeg";
+// Meet the Team
+
 import Happy from "../../static/Happy.jpg";
 import TeamImage from "../../static/anna-samoylova-w55SpMmoPgE-unsplash.jpg";
+import Al from "../../static/profile-shots/Al.jpeg"
+import Person2 from "../../static/profile-shots/Amber Pic.jpeg"
+import Person3 from "../../static/profile-shots/Claire Kenton.jpeg"
+import Person4 from "../../static/profile-shots/MikePic1.jpeg"
+import Person5 from "../../static/profile-shots/Unknown-1.jpeg"
 
 const Layout = ({
+  
   paragraphColumn = "left",
   titleColumn = "left",
   imageColumn = "left",
   children,
+
+  
+  
 }) => (
+  
   <div className="layout">
     <Bg />
     <NavBar />
@@ -42,6 +63,8 @@ const Layout = ({
         <div className="right-column">
           <EightComponent />
         </div>
+
+        
 
         <div className="full-width-column" colSpan="2">
           <FullWidthComponent svgImage={svgImage1} />{" "}
@@ -106,11 +129,11 @@ const Layout = ({
         )}
 
 
-        {imageColumn === "left" && (
-          <div className="right-column">
-            <ImageComponent src={AlistairTurnerImage} alt="Alistair Turner" />
-          </div>
-        )}
+{imageColumn === "left" && (
+  <div className="right-column">
+    <ImageComponent src={Al} alt="Alistair" title="Alistair Turner" text="Managing Director" />
+  </div>
+)}
 
         <div className="left-column">
           <EmptySpace />
@@ -122,7 +145,7 @@ const Layout = ({
 
         {imageColumn === "left" && (
           <div className="left-column">
-            <ImageComponent src={AlistairTurnerImage} alt="Alistair Turner" />
+            <ImageComponent src={Person5} alt="Yvonne Turner" title="Yvonne Turner" text="MARKETING DIRECTOR"  />
           </div>
         )}
 
@@ -132,7 +155,7 @@ const Layout = ({
 
         {imageColumn === "left" && (
           <div className="right-column">
-            <ImageComponent src={AlistairTurnerImage} alt="Alistair Turner" />
+            <ImageComponent src={Person4} alt="Mike Fletcher" title="Mike Fletcher" text="FREELANCE WRITER / CONTENT PRODUCER" />
           </div>
         )}
 
@@ -142,7 +165,17 @@ const Layout = ({
 
         {imageColumn === "left" && (
           <div className="left-column">
-            <ImageComponent src={AlistairTurnerImage} alt="Alistair Turner" />
+            <ImageComponent src={Person3} alt="Claire Kenton" title="Claire Kenton" text="FREELANCE WRITER / JOURNALIST" />
+          </div>
+        )}
+
+<div className="right-column">
+          <EmptySpace />
+        </div>
+
+        {imageColumn === "left" && (
+          <div className="right-column">
+            <ImageComponent src={Person2} alt="Amber Maher" title="Amber Maher" text="FREELANCE ACCOUNT EXECUTIVE" />
           </div>
         )}
 
@@ -159,9 +192,18 @@ const Layout = ({
   <ExperienceLogos />
 </div>
 
+<div className="full-width-column" colSpan="2">
+          <FullWidthComponent svgImage={svgImage5} />{" "}
+          {/* Use the desired SVG image */}
+        </div>
+
+        <div className="full-width-column" colSpan="2">
+  <FullWidthParagraphComponent text={'This is design and branding EIGHT-style. Building on intelligence and audience insight before we let loose with the creatives. \n To do this takes an agency that understands the audiences you’re trying to reach, that make it their business to research who they are, what they care about - both at work and in their day to day lives. \nThe role of brand is increasingly important when it comes to how event planners select the people that they choose to work with. They don’t just want expertise and experience, that’s a given, they want brand alignment and shared values too. EIGHT gets this.'} />
+</div>
 
 
-        
+
+      
 
         
 
@@ -172,6 +214,26 @@ const Layout = ({
 
         {children}
       </div>
+
+      
+   
+
+      
+
+
+      
+      
+
+      
+
+
+
+    
+
+
+
+
+
     </main>
   </div>
 );

@@ -1,7 +1,8 @@
 import React, { useRef, useEffect, useState } from 'react';
 import '../styles/ImageComponent.css';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
-const ImageComponent = ({ src, alt }) => {
+const ImageComponent = ({ src, alt, title, text }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const componentRef = useRef(null);
@@ -48,8 +49,11 @@ const ImageComponent = ({ src, alt }) => {
           <img src={src} alt={alt} className="square-image" />
         </div>
         <div className="image-component-text-container">
-          <p className="image-component-text-bold">Your Inter Bold Text</p>
-          <p className="image-component-text-light">Your Inter Light Text</p>
+          <p className="image-component-text-bold">{title}</p>
+          <p className="image-component-text-light">{text}</p>
+          <div className="icon-container">
+            <LinkedInIcon />
+          </div>
         </div>
       </div>
     </div>

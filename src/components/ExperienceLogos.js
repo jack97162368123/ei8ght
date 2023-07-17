@@ -1,10 +1,13 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
+import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper/core';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css';
+
 import '../styles/ExperienceLogos.css';
+// import '../../../node_modules/swiper/css';
+// import 'swiper/css';
+
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 

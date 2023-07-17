@@ -28,19 +28,20 @@ const FullWidthParagraphComponent = ({ text }) => {
 
   return (
     <div className="full-width-paragraph-column">
-    
-    <div
-      className="full-width-paragraph-component"
-      ref={componentRef}
-      style={{
-        opacity: 0,
-        transform: "translateY(10%)",
-        transition: "opacity 0.5s, transform 0.5s",
-      }}
-    >
-      <p>{text}</p>
+      <div
+        className="full-width-paragraph-component"
+        ref={componentRef}
+        style={{
+          opacity: 0,
+          transform: "translateY(10%)",
+          transition: "opacity 0.5s, transform 0.5s",
+        }}
+      >
+        {text.split("\n").map((item, key) => {
+          return <span className="text-class" key={key}>{item}</span>;
+        })}
       </div>
-      </div>
+    </div>
   );
 };
 

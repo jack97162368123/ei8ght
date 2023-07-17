@@ -1,5 +1,11 @@
-.welcome-component-container {
+.parent-container {
   height: 100vh;
+  overflow: hidden;
+
+}
+
+.welcome-component-container {
+  height: 100%;
   display: flex;
   max-width: 100vw;
   flex-direction: column;
@@ -45,7 +51,6 @@
   animation: slideUp 1s ease-in-out forwards;
 }
 
-
 .eight-text p {
   display: flex;
   justify-content: flex-end; /* Align flex items to the start (left) */
@@ -64,9 +69,7 @@
   box-sizing: border-box;
   margin-top: auto; /* Add this rule to align to the bottom */
   max-width: 100vw;
-  
 }
-
 
 @media screen and (max-width: 768px) {
   .welcome-text p {
