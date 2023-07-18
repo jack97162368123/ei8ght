@@ -1,15 +1,13 @@
 /* Paragraph.css */
 
 .paragraph {
-  padding: 1em;
+  padding: 0;
   color: #ffffff;
   font-size: clamp(1.2rem, 1.6vw, 1.6rem);
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  margin-right: 0;
+  margin: 1em;
   line-height: 150%;
   opacity: 0;
+  
 }
 
 .paragraph-area {
