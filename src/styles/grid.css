@@ -14,6 +14,8 @@
 
 .right-column {
   grid-column: 2;
+  height: auto;
+  align-items: flex-start;
 }
 
 @media (max-width: 768px) {

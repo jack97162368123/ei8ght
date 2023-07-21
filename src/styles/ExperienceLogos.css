@@ -13,22 +13,28 @@
     padding: 1rem;
     font-weight: bold;
     text-align: center;
-    /* background-color: #303d4e80; */
+    background-color: #303d4e80;
     color: black;
     box-sizing: border-box;
-    font-size: clamp(1.5rem, 2vw, 2rem);
+   
 
 
   }
   
+  .carousel-title {
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ef0690;
+  
+  }
+  
+
 .swiperbg{background-color: #ffffff;
 padding: 2vh;
 
-.carousel-title {
-  text-align: center;
-  margin-bottom: 1em;
-  font-weight: bold;
-}
+
 
 
 }

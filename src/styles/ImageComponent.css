@@ -1,32 +1,7 @@
-/* ImageComponent.css */
-
 .image-component {
-  grid-column: span 2;
-  grid-area: image;
   position: relative;
-  
-  opacity: 0;
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  transform: translateY(20px); /* The image starts slightly lower */
-  scroll-margin-top: 50vh;
-  z-index: 1;
-}
-
-.image-component.is-visible {
-  opacity: 1;
-  transform: translateY(0); /* The image moves to its final position */
-}
-
-.white-box {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100vh;
-  background-color: white;
-  z-index: 2;
-  transition: transform 0.5s ease;
-  transform: translateY(-100%); /* Initially hidden above the viewport */
+  z-index: 1;
 }
 
 .image-component-container {
@@ -43,52 +18,48 @@
 
 .image-component-container img {
   position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
   object-fit: cover;
-  height: auto;
+  height: 100%;
+  width: 100%;
 }
 
 .image-component-text-container {
-  position: relative;
-  bottom: 0;
-  left: 0;
-  margin-top: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   padding: 1em;
   background-color: #303d4e80;
   color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
 }
 
-.image-component-text-bold {
-  font-family: 'Inter', sans-serif;
-  font-weight: bold;
-  margin: 0;
-}
-
+.image-component-text-bold,
 .image-component-text-light {
   font-family: 'Inter', sans-serif;
-  font-weight: normal;
   margin: 0;
-
 }
 
 .icon-container {
   margin-left: auto;
 }
 
-
 .image-wrapper {
   width: 100%;
-  height: 100%;
+  height: 0;
+  padding-bottom: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   position: relative;
+}
+
+.image-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 768px) {

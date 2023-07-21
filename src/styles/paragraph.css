@@ -1,7 +1,7 @@
 /* Paragraph.css */
 
 .paragraph {
-  padding: 0;
+  padding: .5em;
   color: #ffffff;
   font-size: clamp(1.2rem, 1.6vw, 1.6rem);
   margin: 1em;
@@ -12,12 +12,14 @@
 
 .paragraph-area {
   grid-area: paragraph;
+  height: auto;
 }
 
 .bg-color {
   background-color: #303d4e80;
   position: relative;
   z-index: -1;
+  height: 100%;
 }
 
 @media screen and (max-width: 768px) {
