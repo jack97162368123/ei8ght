@@ -1,51 +1,53 @@
 import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../styles/VerticalScrollCarousel.css';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const VerticalScrollCarousel = ({ words }) => {
   const containerRef = useRef(null);
-  const wrapperRef = useRef(null);
+  const elementsRef = useRef([]);
+  elementsRef.current = [];
+
+  const addToRefs = (el) => {
+    if (el && !elementsRef.current.includes(el)) {
+      elementsRef.current.push(el);
+    }
+  };
 
   useEffect(() => {
-    const container = containerRef.current;
-      const wrapper = wrapperRef.current;
-      
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top 50%", // Adjust this value to make the word stay in the middle of the screen longer
+        end: "bottom 50%", // Adjust this value to make the word stay in the middle of the screen longer
+        scrub: true,
+      },
+    });
 
-    // Calculate the height of each word element
-    const wordHeight = wrapper.children[0].offsetHeight;
+    tl.to(elementsRef.current, {
+      y: (i) => ((i - words.length / 2) * 400) % (window.innerHeight * 1.5), // Increase vertical distance
+      rotationX: (i) => ((i - words.length / 2) * 360) % 360, // Increase rotation
+      opacity: (i) => i === Math.floor(words.length / 2) ? 1 : 0 // Adjust opacity to show only one word at a time
+    });
 
-    // Set the initial transform value
-    let translateY = 0;
-
-    const animateCarousel = () => {
-      translateY -= wordHeight;
-
-      // Add a transition effect to create a smooth scrolling motion
-      wrapper.style.transition = 'transform 0.5s ease-out';
-      wrapper.style.transform = `translateY(${translateY}px)`;
-
-      // Reset the position once the last word has been shown
-      if (translateY <= -wordHeight * (words.length - 1)) {
-        translateY = 0;
-        wrapper.style.transition = 'none';
-        wrapper.style.transform = `translateY(${translateY}px)`;
-      }
+    return () => {
+      tl.kill();
     };
-
-    const intervalId = setInterval(animateCarousel, 2000);
-
-    // Cleanup interval on unmount
-    return () => clearInterval(intervalId);
   }, [words]);
 
   return (
-    <div className="vertical-scroll-carousel" ref={containerRef}>
-      <div className="vertical-scroll-carousel-wrapper" ref={wrapperRef}>
-        {words.map((word, index) => (
-          <div className="vertical-scroll-carousel-word" key={index}>
-            {word}
-          </div>
-        ))}
-      </div>
+    <div className="carousel" ref={containerRef}>
+      {words.map((word, index) => (
+        <div
+          className="carousel-element"
+          key={index}
+          ref={addToRefs}
+        >
+          {word}
+        </div>
+      ))}
     </div>
   );
 };
