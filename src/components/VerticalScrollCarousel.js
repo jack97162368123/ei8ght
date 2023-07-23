@@ -22,11 +22,13 @@ const VerticalScrollCarousel = ({ words }) => {
         start: "top top",
         end: () => "+=" + (containerRef.current.offsetHeight),
         scrub: true,
+        pin: true, // Pin the container during scroll
+        pinSpacing: false, // Disable pin spacing
       },
     });
 
     tl.to(elementsRef.current, {
-      y: (i) => ((i - words.length / 2) * 500) % (window.innerHeight * 10), // Increase to control vertical distance
+      y: (i) => ((i - words.length / 2) * 500) % (window.innerHeight * 1), // Increase to control vertical distance
       rotationX: (i) => ((i - words.length / 2) * 360) % 360, // Adjust to control rotation
     });
 
