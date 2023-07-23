@@ -3,16 +3,16 @@ import React from "react";
 import Bg from "./Bg";
 import NavBar from "./NavBar";
 import Paragraph from "./Paragraph";
-import ImageComponent from "./ImageComponent";
 import FullWidthComponent from ".//FullWidthComponent";
 import WelcomeComponent from "./WelcomeComponent";
 import EightComponent from "./EightComponent";
-import EmptySpace from "./EmptySpace";
 import ExperienceLogos from "./ExperienceLogos";
 import ImageComponentHalf from "./ImageComponentHalf";
 import FullWidthParagraph from "./FullWidthParagraphComponent";
 import FullWidthParagraphComponent from "./FullWidthParagraphComponent"; // the new import
 import VerticalScrollCarousel from "./VerticalScrollCarousel";
+import ThreeColumnImageComponent from './ThreeColumnImageComponent';
+
 
 // Styles
 
@@ -33,11 +33,6 @@ import Footer from "../../static/Bottom.svg";
 
 import Happy from "../../static/Happy.jpg";
 import TeamImage from "../../static/anna-samoylova-w55SpMmoPgE-unsplash.jpg";
-import Al from "../../static/profile-shots/Al.jpeg";
-import Person2 from "../../static/profile-shots/Amber Pic.jpeg";
-import Person3 from "../../static/profile-shots/Claire Kenton.jpeg";
-import Person4 from "../../static/profile-shots/MikePic1.jpeg";
-import Person5 from "../../static/profile-shots/Unknown-1.jpeg";
 import Philosphy from "../../static/Philosphy.png";
 import Design from "../../static/Design.png";
 
@@ -132,83 +127,26 @@ const Layout = ({
           </div>
         )}
 
-        {imageColumn === "left" && (
-          <div className="right-column">
-            <ImageComponent
-              src={Al}
-              alt="Alistair"
-              title="Alistair Turner"
-              text="Managing Director"
-              url="https://www.linkedin.com/in/alistair-turner-6b42375/"
-            />
-          </div>
-        )}
+        
 
-        <div className="left-column">
-          <EmptySpace />
-        </div>
+<div className="full-width-column" colSpan="2">
+<ThreeColumnImageComponent />
+</div>
+      
 
-        {imageColumn === "left" && (
-          <div className="left-column">
-            <ImageComponent
-              src={Person5}
-              alt="Yvonne Turner"
-              title="Yvonne Turner"
-              text="MARKETING DIRECTOR"
-              url="https://www.linkedin.com/in/yvonne-turner-82537024/"
-            />
-          </div>
-        )}
+        
 
-        <div className="right-column">
-          <EmptySpace height={`${200}px`} />
-        </div>
+        
 
-        {imageColumn === "left" && (
-          <div className="right-column">
-            <ImageComponent
-              src={Person4}
-              alt="Mike Fletcher"
-              title="Mike Fletcher"
-              text="FREELANCE WRITER / CONTENT PRODUCER"
-              url="https://www.linkedin.com/in/mikeyfletch/"
-            />
-          </div>
-        )}
+        
 
-        <div className="right-column">
-          <EmptySpace />
-        </div>
+       
 
-        {imageColumn === "left" && (
-          <div className="left-column">
-            <ImageComponent
-              src={Person3}
-              alt="Claire Kenton"
-              title="Claire Kenton"
-              text="FREELANCE WRITER / JOURNALIST"
-              url="https://www.linkedin.com/in/clairekenton/"
-            />
-          </div>
-        )}
+      
 
-        <div className="right-column">
-          <EmptySpace />
-        </div>
+       
 
-        <>
-          {imageColumn === "left" && (
-            <div className="right-column">
-              <ImageComponent
-                src={Person2}
-                alt="Amber Maher"
-                title="Amber Maher"
-                text="FREELANCE ACCOUNT EXECUTIVE"
-                url="https://www.linkedin.com/in/ambermaher/"
-              />
-            </div>
-          )}
-        </>
+       
 
         <div className="full-width-column" colSpan="2">
           <FullWidthComponent svgImage={svgImage4} />{" "}

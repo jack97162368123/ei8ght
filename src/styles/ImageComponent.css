@@ -8,6 +8,8 @@
   position: relative;
   width: 100%;
   height: auto;
+  border-radius: 30px; /* Apply border radius to the entire image component container */
+  overflow: hidden; /* Clip the child elements to match the border radius */
 }
 
 .image-component-container::before {
@@ -31,6 +33,8 @@
   padding: 1em;
   background-color: #303d4e80;
   color: white;
+  border-bottom-left-radius: 10px;  /* Match the bottom border radius to the container */
+  border-bottom-right-radius: 10px; /* Match the bottom border radius to the container */
 }
 
 .image-component-text-bold,
@@ -60,6 +64,8 @@
   left: 0;
   width: 100%;
   height: 100%;
+  border-top-left-radius: 10px;  /* Match the top border radius to the container */
+  border-top-right-radius: 10px; /* Match the top border radius to the container */
 }
 
 @media (max-width: 768px) {
