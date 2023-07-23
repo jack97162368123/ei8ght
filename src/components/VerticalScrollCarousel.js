@@ -8,7 +8,6 @@ gsap.registerPlugin(ScrollTrigger);
 const VerticalScrollCarousel = ({ words }) => {
   const containerRef = useRef(null);
   const elementsRef = useRef([]);
-  elementsRef.current = [];
 
   const addToRefs = (el) => {
     if (el && !elementsRef.current.includes(el)) {
@@ -20,20 +19,32 @@ const VerticalScrollCarousel = ({ words }) => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: containerRef.current,
-        start: "top 50%", // Adjust this value to make the word stay in the middle of the screen longer
-        end: "bottom 50%", // Adjust this value to make the word stay in the middle of the screen longer
+        start: "top top",
+        end: () => "+=" + (containerRef.current.offsetHeight),
         scrub: true,
       },
     });
 
     tl.to(elementsRef.current, {
-      y: (i) => ((i - words.length / 2) * 400) % (window.innerHeight * 1.5), // Increase vertical distance
-      rotationX: (i) => ((i - words.length / 2) * 360) % 360, // Increase rotation
-      opacity: (i) => i === Math.floor(words.length / 2) ? 1 : 0 // Adjust opacity to show only one word at a time
+      y: (i) => ((i - words.length / 2) * 500) % (window.innerHeight * 10), // Increase to control vertical distance
+      rotationX: (i) => ((i - words.length / 2) * 360) % 360, // Adjust to control rotation
+    });
+
+    elementsRef.current.forEach((el, i) => {
+      ScrollTrigger.create({
+        trigger: el,
+        start: "top 75%",
+        end: "bottom 75%",
+        onEnter: () => gsap.to(el, { opacity: 1, overwrite: "auto" }),
+        onLeave: () => gsap.to(el, { opacity: 0, overwrite: "auto" }),
+        onEnterBack: () => gsap.to(el, { opacity: 1, overwrite: "auto" }),
+        onLeaveBack: () => gsap.to(el, { opacity: 0, overwrite: "auto" }),
+      });
     });
 
     return () => {
       tl.kill();
+      ScrollTrigger.getAll().forEach((st) => st.kill());
     };
   }, [words]);
 
@@ -44,6 +55,7 @@ const VerticalScrollCarousel = ({ words }) => {
           className="carousel-element"
           key={index}
           ref={addToRefs}
+          style={{ opacity: 0 }} // Initially all words are hidden
         >
           {word}
         </div>
