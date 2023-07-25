@@ -12,7 +12,7 @@ import FullWidthParagraph from "./FullWidthParagraphComponent";
 import FullWidthParagraphComponent from "./FullWidthParagraphComponent"; // the new import
 import VerticalScrollCarousel from "./VerticalScrollCarousel";
 import ThreeColumnImageComponent from './ThreeColumnImageComponent';
-
+import DesignBranding from './DesignBranding'; 
 
 // Styles
 
@@ -33,8 +33,6 @@ import Footer from "../../static/Bottom.svg";
 
 import Happy from "../../static/Happy.jpg";
 import TeamImage from "../../static/anna-samoylova-w55SpMmoPgE-unsplash.jpg";
-import Philosphy from "../../static/Philosphy.png";
-import Design from "../../static/Design.png";
 
 const words = ["Share", "Connect", "Learn"];
 
@@ -161,28 +159,18 @@ const Layout = ({
           <ExperienceLogos />
         </div>
 
-        <div className="full-width-column" colSpan="2">
-          <FullWidthComponent svgImage={Design} />{" "}
-          {/* Use the desired SVG image */}
-        </div>
+        
 
-        {/* <div className="full-width-column" colSpan="2">
-          <FullWidthParagraphComponent
-            text={
-              "This is design and branding EIGHT-style. Building on intelligence and audience insight before we let loose with the creatives. \n To do this takes an agency that understands the audiences you’re trying to reach, that make it their business to research who they are, what they care about - both at work and in their day to day lives. \n The role of brand is increasingly important when it comes to how event planners select the people that they choose to work with. They don’t just want expertise and experience, that’s a given, they want brand alignment and shared values too. EIGHT gets this."
-            }
-          />
-        </div> */}
-
-        {/* <div className="full-width-column" colSpan="2">
-          <FullWidthComponent svgImage={Branding} />{" "}
-          {/* Use the desired SVG image */}
-        {/* </div>  */}
 
         <div className="full-width-column" colSpan="2">
+        <DesignBranding />
+</div>
+      
+
+        {/* <div className="full-width-column" colSpan="2">
           <FullWidthComponent svgImage={Philosphy} />{" "}
           {/* Use the desired SVG image */}
-        </div>
+      {/*  </div> */}
 
        
 

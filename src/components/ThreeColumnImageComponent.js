@@ -8,6 +8,7 @@ import Person4 from "../../static/profile-shots/MikePic1.jpeg";
 import Person5 from "../../static/profile-shots/Unknown-1.jpeg";
 import Person2 from "../../static/profile-shots/Amber Pic.jpeg";
 import Person3 from "../../static/profile-shots/Claire Kenton.jpeg";
+import Person6 from "../../static/profile-shots/Nyomi.png";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -24,7 +25,7 @@ const ThreeColumnImageComponent = () => {
         end: 'bottom 99%',
         scrub: true,
       },
-      x: -100,
+      y: 100,  // Change x to y
       opacity: 0,
       stagger: 0.5
     });
@@ -79,14 +80,14 @@ const ThreeColumnImageComponent = () => {
         />{" "}
       </div>
       <div className="three-col-image-comp-right-column">
-        <ImageComponent
-          src={Person4}
-          alt="Mike Fletcher"
-          title="Mike Fletcher"
-          text="FREELANCE WRITER / CONTENT PRODUCER"
-          url="https://www.linkedin.com/in/mikeyfletch/"
-        />
-      </div>
+  <ImageComponent
+    src={Person6}
+    alt="Nyomi Rose"
+    title="Nyomi Rose"
+    text="XXXX"
+    url="https://www.linkedin.com/in/nyomirose/"
+  />
+</div>
     </div>
   );
 };
