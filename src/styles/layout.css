@@ -5,13 +5,11 @@
 
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   max-width: 100vw;
   border: none;
-  outline: none;  
+  outline: none;
   overflow-x: hidden;
-  
-
 }
 
 html {

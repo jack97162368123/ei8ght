@@ -1,0 +1,30 @@
+.video-container {
+  position: relative;
+  width: auto;
+  height: auto;
+  padding-bottom: 56.25%; /* For a 16:9 aspect ratio */
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.full-width-column {
+  grid-column: span 2;
+}
+
+.video-title {
+  position: absolute;
+  padding-left: 20px;
+  margin: 0;
+
+  color: white;
+  font-size: 6em;
+}

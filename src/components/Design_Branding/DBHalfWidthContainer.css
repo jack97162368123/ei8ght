@@ -1,0 +1,50 @@
+.half-width-container-DB {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  position: relative;
+  width: 100%;
+  background-color: white;
+  height: auto;
+  border-radius: 30px;
+}
+
+.content-paragraph-DB {
+  padding-top: 3em;
+  padding-right: 3em;
+  padding-left: 3em;
+  flex-grow: 1;
+  color: black !important;
+  column-count: 2;
+  column-gap: 2em;
+}
+
+.top-right-paragraph-DB {
+  text-align: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: black;
+}
+
+.parallax-image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 3em;
+  margin-bottom: 3em;
+border-radius: 30px;
+  width: 40%; /* adjust this as needed */
+}
+
+@media (max-width: 768px) {
+  .half-width-container-DB {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .content-paragraph-DB {
+    column-count: 1;
+  }
+}

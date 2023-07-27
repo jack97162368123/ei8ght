@@ -1,0 +1,13 @@
+.p-image {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    object-fit: fill;
+    
+}
+
+@media screen and (max-width: 768px) {
+    .p-image {
+        width: 100%;
+    }
+}

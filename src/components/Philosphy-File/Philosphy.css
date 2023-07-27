@@ -1,0 +1,24 @@
+.half-width-section {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr; /* two equal-width columns */
+    gap: 0; /* space between columns */
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.top-right-paragraph {
+    top: 0;
+    right: 0;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    
+}
+
+@media (max-width: 768px) {
+    .half-width-section {
+        grid-template-columns: 1fr; /* one column on small screens */
+    }
+}

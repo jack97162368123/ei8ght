@@ -11,8 +11,9 @@ import ImageComponentHalf from "./ImageComponentHalf";
 import FullWidthParagraph from "./FullWidthParagraphComponent";
 import FullWidthParagraphComponent from "./FullWidthParagraphComponent"; // the new import
 import VerticalScrollCarousel from "./VerticalScrollCarousel";
-import ThreeColumnImageComponent from './ThreeColumnImageComponent';
-import DesignBranding from './DesignBranding'; 
+import ThreeColumnImageComponent from "./ThreeColumnImageComponent";
+import Philosphy from "./Philosphy-File/Philosphy.js";
+import DesignBranding from "./Design_Branding/DesignBranding";
 
 // Styles
 
@@ -63,11 +64,12 @@ const Layout = ({
         <div className="full-width-column" colSpan="2">
           <VerticalScrollCarousel words={words} />{" "}
           {/* Use VerticalScrollCarousel here */}
-        </div> 
+        </div>
 
         {paragraphColumn === "left" && (
           <div className="left-column">
-            <Paragraph text="A specialist PR & marketing agency working in the world of events and experience marketing. We exist because we love events, marketing, and live experiences. <br /> We talk about empathetic marketing; the creation of campaigns that take the time to understand audiences, their world, and their lives, and that build a closer connection with them. <br /> We talk about creativity; creating ideas, campaigns, and messages that create empathy and action.\n We exist in that sweet spot between events and brands, people and places, emotion, creativity, and intelligence." />
+            <Paragraph
+              text="A specialist PR & marketing agency working in the world of events and experience marketing. We exist because we love events, marketing, and live experiences. <br /> We talk about empathetic marketing; the creation of campaigns that take the time to understand audiences, their world, and their lives, and that build a closer connection with them. <br /> We talk about creativity; creating ideas, campaigns, and messages that create empathy and action.\n We exist in that sweet spot between events and brands, people and places, emotion, creativity, and intelligence." />
           </div>
         )}
 
@@ -125,26 +127,9 @@ const Layout = ({
           </div>
         )}
 
-        
-
-<div className="full-width-column" colSpan="2">
-<ThreeColumnImageComponent />
-</div>
-      
-
-        
-
-        
-
-        
-
-       
-
-      
-
-       
-
-       
+        <div className="full-width-column" colSpan="2">
+          <ThreeColumnImageComponent />
+        </div>
 
         <div className="full-width-column" colSpan="2">
           <FullWidthComponent svgImage={svgImage4} />{" "}
@@ -159,22 +144,13 @@ const Layout = ({
           <ExperienceLogos />
         </div>
 
-        
-
-
         <div className="full-width-column" colSpan="2">
-        <DesignBranding />
-</div>
-      
+          <DesignBranding />
+        </div>
 
-        {/* <div className="full-width-column" colSpan="2">
-          <FullWidthComponent svgImage={Philosphy} />{" "}
-          {/* Use the desired SVG image */}
-      {/*  </div> */}
-
-       
-
-        
+        <div className="full-width-column">
+          <Philosphy />
+        </div>
 
         <div className="full-width-column" colSpan="2">
           <FullWidthComponent svgImage={About_EIGHT} />{" "}
@@ -189,18 +165,11 @@ const Layout = ({
           />
         </div>
 
-        
-
-        
-
         <div className="full-width-column" colSpan="2">
           <FullWidthComponent svgImage={Join} />{" "}
           {/* Use the desired SVG image */}
         </div>
 
-        
-
-        
         <div className="full-width-column" colSpan="2">
           <FullWidthComponent svgImage={Footer} />{" "}
           {/* Use the desired SVG image */}
