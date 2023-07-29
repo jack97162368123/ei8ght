@@ -1,3 +1,4 @@
+// FullWidthVideo.js
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -9,20 +10,22 @@ const FullWidthVideo = ({ videoSrc }) => {
     const videoRef = useRef(null);
 
     useEffect(() => {
-        gsap.from(videoRef.current, {
-            x: 200,
-            autoAlpha: 0,
-            duration: 1,
-            ease: 'power3.out',
-            scrollTrigger: {
-                trigger: videoRef.current,
-                start: "top bottom",
-                end: "bottom center",
-                scrub: true,
-                once: true, // add this line
-                toggleActions: "play none none none" // add this line
-            },
-        });
+        if (window.innerWidth > 768) {
+            gsap.from(videoRef.current, {
+                x: 200,
+                autoAlpha: 0,
+                duration: 1,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: videoRef.current,
+                    start: "top bottom",
+                    end: "bottom center",
+                    scrub: true,
+                    once: true, // add this line
+                    toggleActions: "play none none none" // add this line
+                },
+            });
+        }
     }, []);
 
     return (

@@ -27,3 +27,10 @@
   color: white;
   font-size: 6em;
 }
+
+@media (max-width: 768px) {
+  .video-title {
+    font-size: 3em; /* adjust this value as needed */
+    padding: .2em; /* adjust this value as needed */
+  }
+}

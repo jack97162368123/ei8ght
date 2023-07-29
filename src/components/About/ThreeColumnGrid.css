@@ -4,7 +4,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; /* three equally wide columns */
     gap: 0; /* adjust as needed */
-    height: auto; /* added from .paragraph-area */
+    height: auto;
+    max-width: 100%;
 }
   
 .main-item {
@@ -32,8 +33,24 @@
 }
   
 @media screen and (max-width: 768px) {
-    .main-item {  /* update this from .grid-item to .main-item */
-      font-size: clamp(1.3rem, 5vw, 1.5rem);
-      padding: 1em;
+    .About-Section {
+        grid-template-columns: 1fr; /* one column on smaller screens */
+        padding: 0;
     }
+
+    .main-item {  
+      font-size: clamp(1.3rem, 5vw, 1.5rem);
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+
+    .aboutparagraph {  
+        font-size: clamp(1.3rem, 5vw, 1.5rem);
+        padding: 0 1em; /* Adjust this value as needed */
+        margin: 1em;
+        width: calc(100% - 2em); /* Adjust this value according to the padding */
+    }
+
+
 }

@@ -20,7 +20,7 @@
 
 .top-right-paragraph {
   text-align: left;
-  position: flex-end; /* Add this line */
+  position: absolute; /* Change flex-end to absolute */
   top: 0; /* Add this line */
   right: 0; /* Add this line */
   color: white; /* Make text color white */
@@ -30,9 +30,16 @@
   .half-width-container {
     flex-direction: column;
     width: 100%;
+    padding: 0; /* Add padding around the container */
   }
 
   .content-paragraph {
     column-count: 1; /* On small screens, the content will flow into 1 column */
+    padding: 3em; /* Reduce top padding */
+  }
+
+  .top-right-paragraph {
+    position: static; /* Remove absolute positioning on small screens */
+    padding-top: 0; /* Add some top padding */
   }
 }

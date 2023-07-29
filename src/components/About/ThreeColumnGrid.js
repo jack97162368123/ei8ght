@@ -59,18 +59,26 @@ class ThreeColumnGrid extends React.Component {
       <div className="About-Section">
         <div className="main-item" ref={this.column1}>
           <PsychologyIcon className="icon" />
+         
           <b>Intelligence</b>
+          <div className="aboutparagraph">
           <p>Everyone at EIGHT is committed to what we call the 70/30 principle: that 30% of everything we do will be non-client related. Intelligence gathering. <br /><br />This is about collecting information, trends, data, anecdotal information, gossip, market intelligence and case studies. It’s about becoming information junkies. It means we bring new information to our clients every day.</p>
+        </div>
         </div>
         <div className="main-item" ref={this.column2}>
           <SportsMartialArtsIcon className="icon" />
           <b>Place Holder</b>
-          <p> This approach got big on us, as more and more clients look for us to bring data and insight to their own events. <br /><br /> It started with our creating the ibtm World Trends Report (see below) and has involved in us being curators of content across some of our clients’ events, from CHS to ibtm.</p>
+          <div className="aboutparagraph">
+          
+            <p> This approach got big on us, as more and more clients look for us to bring data and insight to their own events. <br /><br /> It started with our creating the ibtm World Trends Report (see below) and has involved in us being curators of content across some of our clients’ events, from CHS to ibtm.</p>
+            </div>
         </div>
         <div className="main-item" ref={this.column3}>
           <AdfScannerIcon className="icon" />
           <b>Links</b>
-          <p>Text for column 3</p>
+          <div className="aboutparagraph">
+            <p>Text for column 3</p>
+            </div>
         </div>
       </div>
     )

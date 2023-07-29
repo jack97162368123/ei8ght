@@ -20,5 +20,7 @@
 @media (max-width: 768px) {
     .half-width-section {
         grid-template-columns: 1fr; /* one column on small screens */
+        max-width: 100vw; /* ensure the section does not exceed the viewport width */
+
     }
 }

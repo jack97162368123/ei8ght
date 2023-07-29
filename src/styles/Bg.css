@@ -6,7 +6,6 @@
   max-width: 100vw;
 
   height: 100%;
-  overflow: hidden;
   z-index: -1; /* Add this line to place the background behind other content */
 }
 

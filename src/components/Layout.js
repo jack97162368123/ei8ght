@@ -48,7 +48,7 @@ const Layout = ({
     <NavBar />
     <main className="content">
       <div className="grid-container">
-        <div id="home"className="left-column">
+        <div id="home" className="left-column">
           <WelcomeComponent />
         </div>
 
@@ -58,12 +58,10 @@ const Layout = ({
 
         <div className="full-width-column" colSpan="2">
           <FullWidthComponent svgImage={svgImage1} />{" "}
-          {/* Use the desired SVG image */}
         </div>
 
         <div className="full-width-column" colSpan="2">
           <VerticalScrollCarousel words={words} />{" "}
-          {/* Use VerticalScrollCarousel here */}
         </div>
 
         {paragraphColumn === "left" && (
@@ -78,9 +76,8 @@ const Layout = ({
           </div>
         )}
 
-        <div className="full-width-column" colSpan="2">
-          <FullWidthComponent svgImage={svgImage2} />{" "}
-          {/* Use the desired SVG image */}
+        <div className="full-width-column">
+          <FullWidthComponent svgImage={svgImage2} />
         </div>
 
         {imageColumn === "left" && (
@@ -88,9 +85,6 @@ const Layout = ({
             <ImageComponentHalf src={Happy} alt="Alistair Turner" />
           </div>
         )}
-        {/* <div className="left-column">
-          <EmptySpace />
-        </div> */}
 
         {paragraphColumn === "left" && (
           <div className="right-column">
@@ -108,7 +102,6 @@ const Layout = ({
 
         <div className="full-width-column" colSpan="2">
           <FullWidthComponent svgImage={meetTheTeamImage} />{" "}
-          {/* Use the desired SVG image */}
         </div>
 
         {paragraphColumn === "left" && (
@@ -132,7 +125,6 @@ const Layout = ({
 
         <div className="full-width-column" colSpan="2">
           <FullWidthComponent svgImage={svgImage4} />{" "}
-          {/* Use the desired SVG image */}
         </div>
 
         <div className="full-width-column" colSpan="2">
@@ -153,14 +145,11 @@ const Layout = ({
 
         <div id="About" className="full-width-column" colSpan="2">
           <FullWidthComponent svgImage={About_EIGHT} />{" "}
-          {/* Use the desired SVG image */}
         </div>
 
         <div className="full-width-column" colSpan="2">
         <ThreeColumnGrid />
         </div>
-
-   
 
         <div className="full-width-column" colSpan="2">
           <div className="layout">

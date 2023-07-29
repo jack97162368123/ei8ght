@@ -10,7 +10,7 @@ const TitleAndLogos = ({ title, logos }) => {
     const containerRef = useRef(null);
 
     useEffect(() => {
-        if (containerRef.current) {
+        if (containerRef.current && window.innerWidth > 768) {
             gsap.fromTo(
                 containerRef.current,
                 { autoAlpha: 0, x: -200 },
