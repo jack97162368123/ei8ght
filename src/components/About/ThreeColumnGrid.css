@@ -1,0 +1,39 @@
+/* src/components/ThreeColumnGrid.css */
+
+.About-Section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* three equally wide columns */
+    gap: 0; /* adjust as needed */
+    height: auto; /* added from .paragraph-area */
+}
+  
+.main-item {
+    /* Combined styles from .paragraph and .bg-color */
+    padding: 0.5em;
+    color: #ffffff;
+    font-size: clamp(1.2rem, 1.6vw, 1.6rem);
+    margin: 1em;
+    line-height: 150%;
+    background-color: #303d4e80;
+    position: relative;
+    z-index: -1;
+    min-height: 100%; /* changed from height: 100%; */
+    border-radius: 30px; /* adjust as needed */
+    display: flex; /* add this line */
+    flex-direction: column; /* add this line */
+    align-items: center; /* add this line */
+}
+  
+.icon {
+    /* Your styles for the icons here, e.g.: */
+    color: #ffffff; /* adjust as needed */
+    font-size: 60px; /* adjust as needed */
+    margin-bottom: 20px; /* adjust as needed */
+}
+  
+@media screen and (max-width: 768px) {
+    .main-item {  /* update this from .grid-item to .main-item */
+      font-size: clamp(1.3rem, 5vw, 1.5rem);
+      padding: 1em;
+    }
+}

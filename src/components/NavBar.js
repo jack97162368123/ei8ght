@@ -43,9 +43,9 @@ const NavBar = () => {
       </div>
       <ul className={`nav__links ${showMenu ? 'show' : ''}`}>
         <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#design-branding">Design & Branding</a></li>
+        <li><a href="#philosophy">Philosophy</a></li>
+        <li><a href="#About">About Eight</a></li>
       </ul>
       {windowWidth <= 768 && (
         <button className="nav__burger-menu" onClick={toggleMenu} aria-label="Toggle Menu">

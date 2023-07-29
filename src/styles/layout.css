@@ -1,6 +1,6 @@
 .layout {
   display: flex;
-  min-height: 100vh;
+  min-height: auto;
 }
 
 body {
@@ -57,6 +57,87 @@ html {
 .full-width-column {
   grid-column: 1 / span 2;
 }
+
+.footer {
+  height: auto; /* adjust according to your footer content */
+  position: relative;
+  width: 100%;
+  background: #333;
+  color: #fff;
+  display: flex; /* keep this line */
+  justify-content: space-around; /* keep this line */
+  align-items: center; /* keep this line */
+  padding: 20px; /* keep this line */
+  flex-wrap: wrap; /* keep this line */
+}
+
+.logo {
+  width: 10em;
+  height: auto;
+  object-fit: contain;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+
+.footer-text h1 {
+  /* Your styles for the title here, e.g.: */
+  color: #fff;
+  margin-top: 2em;
+  margin-bottom: 0
+}
+
+.footer-text p {
+  /* Your styles for the text here, e.g.: */
+  color: #fff;
+  margin-top: 2em;
+  margin-bottom: 2em;
+
+}
+
+.contact-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 20%;
+text-align: center;
+}
+
+.phone-number {
+  color: #fff; /* adjust as needed */
+  font-size: 16px; /* adjust as needed */
+  padding-left: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px; /* adjust as needed */
+  margin-top: 2em;
+  margin-bottom: 2em;}
+
+.social-icons svg {
+  fill: #fff; /* adjust as needed */
+  width: 24px; /* adjust as needed */
+  height: 24px; /* adjust as needed */
+}
+
+
+
 
 /* Mobile styles */
 @media (max-width: 768px) {

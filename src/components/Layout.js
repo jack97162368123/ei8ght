@@ -14,6 +14,8 @@ import VerticalScrollCarousel from "./VerticalScrollCarousel";
 import ThreeColumnImageComponent from "./ThreeColumnImageComponent";
 import Philosphy from "./Philosphy-File/Philosphy.js";
 import DesignBranding from "./Design_Branding/DesignBranding";
+import Footer from "./Footer";
+import ThreeColumnGrid from "./About/ThreeColumnGrid";
 
 // Styles
 
@@ -27,8 +29,6 @@ import svgImage2 from "../../static/About_EIGHT.svg";
 import meetTheTeamImage from "../../static/meet-the-team.svg";
 import svgImage4 from "../../static/Experence.svg";
 import About_EIGHT from "../../static/About_EIGHT.svg";
-import Join from "../../static/Join.svg";
-import Footer from "../../static/Bottom.svg";
 
 // Meet the Team
 
@@ -48,7 +48,7 @@ const Layout = ({
     <NavBar />
     <main className="content">
       <div className="grid-container">
-        <div className="left-column">
+        <div id="home"className="left-column">
           <WelcomeComponent />
         </div>
 
@@ -68,8 +68,7 @@ const Layout = ({
 
         {paragraphColumn === "left" && (
           <div className="left-column">
-            <Paragraph
-              text="A specialist PR & marketing agency working in the world of events and experience marketing. We exist because we love events, marketing, and live experiences. <br /> We talk about empathetic marketing; the creation of campaigns that take the time to understand audiences, their world, and their lives, and that build a closer connection with them. <br /> We talk about creativity; creating ideas, campaigns, and messages that create empathy and action.\n We exist in that sweet spot between events and brands, people and places, emotion, creativity, and intelligence." />
+            <Paragraph text="A specialist PR & marketing agency working in the world of events and experience marketing. We exist because we love events, marketing, and live experiences. <br /> We talk about empathetic marketing; the creation of campaigns that take the time to understand audiences, their world, and their lives, and that build a closer connection with them. <br /> We talk about creativity; creating ideas, campaigns, and messages that create empathy and action.\n We exist in that sweet spot between events and brands, people and places, emotion, creativity, and intelligence." />
           </div>
         )}
 
@@ -144,38 +143,31 @@ const Layout = ({
           <ExperienceLogos />
         </div>
 
-        <div className="full-width-column" colSpan="2">
+        <div id="design-branding" className="full-width-column" colSpan="2">
           <DesignBranding />
         </div>
 
-        <div className="full-width-column">
+        <div id="philosophy" className="full-width-column">
           <Philosphy />
         </div>
 
-        <div className="full-width-column" colSpan="2">
+        <div id="About" className="full-width-column" colSpan="2">
           <FullWidthComponent svgImage={About_EIGHT} />{" "}
           {/* Use the desired SVG image */}
         </div>
 
         <div className="full-width-column" colSpan="2">
-          <FullWidthParagraphComponent
-            text={
-              "Intelligence is Part One of the three main tenets of EIGHT.\n Everyone at EIGHT is committed to what we call the 70/30 principle: that 30% of everything we do will be non-client related. Intelligence gathering. This is about collecting information, trends, data, anecdotal information, gossip, market intelligence and case studies. It’s about becoming information junkies. It means we bring new information to our clients every day.\n This approach got big on us, as more and more clients look for us to bring data and insight to their own events. \n It started with our creating the ibtm World Trends Report (see below) and has involved in us being curators of content across some of our clients’ events, from CHS to ibtm."
-            }
-          />
+        <ThreeColumnGrid />
         </div>
+
+   
 
         <div className="full-width-column" colSpan="2">
-          <FullWidthComponent svgImage={Join} />{" "}
-          {/* Use the desired SVG image */}
+          <div className="layout">
+            <main>{children}</main>
+            <Footer />
+          </div>
         </div>
-
-        <div className="full-width-column" colSpan="2">
-          <FullWidthComponent svgImage={Footer} />{" "}
-          {/* Use the desired SVG image */}
-        </div>
-
-        {children}
       </div>
     </main>
   </div>
