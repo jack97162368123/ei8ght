@@ -46,10 +46,14 @@ const Layout = ({
     <Bg />
     <NavBar />
     <main className="content">
+
+    <WelcomeEightComponent welcomeText="Welcome to" contentText="EI8HT" />
+
       <div className="grid-container">
-        <div id="home" className="left-column">
+       
+        {/* <div id="home" className="FullWidthComponent">
         <WelcomeEightComponent welcomeText="Welcome to" contentText="EI8HT" />
-        </div>
+        </div> */}
 
         <div className="full-width-column" colSpan="2">
           <FullWidthComponent svgImage={svgImage1} />{" "}

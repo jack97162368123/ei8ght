@@ -45,7 +45,6 @@ const Paragraph = ({ text }) => {
   }, [paragraphs.length]);
 
   return (
-    <div className="grid-item right-column paragraph-area">
       <div className="bg-color">
         {paragraphs.map((item, index) => (
           <p
@@ -55,7 +54,6 @@ const Paragraph = ({ text }) => {
             className="paragraph"
           />
         ))}
-      </div>
       <Helmet>
         <meta name="description" content="Your page description" />
       </Helmet>

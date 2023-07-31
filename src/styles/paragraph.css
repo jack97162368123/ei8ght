@@ -1,25 +1,22 @@
 /* Paragraph.css */
 
 .paragraph {
-  padding: .5em;
+  padding: 1em;
   color: #ffffff;
   font-size: clamp(1.2rem, 1.6vw, 1.6rem);
-  margin: 1em;
+  margin: 0;
   line-height: 150%;
   opacity: 0;
-  
+  align-items: flex-start;
+
 }
 
-.paragraph-area {
-  grid-area: paragraph;
-  height: auto;
-}
+
 
 .bg-color {
   background-color: #303d4e80;
-  position: relative;
   z-index: -1;
-  height: 100%;
+  height: auto;
   border-radius: 30px;
 }
 

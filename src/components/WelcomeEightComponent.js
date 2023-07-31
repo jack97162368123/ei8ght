@@ -17,8 +17,7 @@ const WelcomeEightComponent = ({ welcomeText, contentText }) => {
           </div>
         </div>
         <div className="two-column-container">
-          <div className="welcome-two">
-          </div>
+          
           <div className="eight-text">
             <p>{contentText}</p>
           </div>

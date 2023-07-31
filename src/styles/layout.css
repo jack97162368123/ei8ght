@@ -17,9 +17,8 @@ html {
 }
 
 .content {
-  width: 15vw;
-  padding: 0px;
-  margin: 0;
+  width: 85vw;
+  margin-left: 15vw;
   text-decoration: none;
   color: inherit;
   border: none;
@@ -30,8 +29,6 @@ html {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
-  width: 85vw;
-  margin-left: 15vw;
   z-index: 1;
   position: relative;
 }
@@ -46,12 +43,14 @@ html {
 
 .left-column {
   grid-column: 1;
+  max-width: 100%;
 }
 
 .right-column {
   grid-column: 2;
   align-items: flex-start;
   position: relative;
+  max-width: 100%;
 }
 
 .full-width-column {
