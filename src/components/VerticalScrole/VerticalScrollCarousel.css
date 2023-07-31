@@ -1,0 +1,20 @@
+.SectionVerticalScrollCarousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+h1 {
+  font-size: 15vw;
+  text-align: center;
+  color: white;
+  margin: 0;
+  padding: 0;
+}

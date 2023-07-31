@@ -12,6 +12,10 @@ import videoSrc from "./../../images/Videos/Philosify.mp4";
 
 import Image1 from "./../../images/Philosphy/Image1.png";
 import Image2 from "./../../images/Philosphy/Image2.png";
+import Image3 from "./../../images/Philosphy/shutterstock_1034738296.jpg";
+import Image4 from "./../../images/Philosphy/Scottish-Event-Campus-during-COP26-November-2021-800x423-362d9c2b22.png";
+import Image5 from "./../../images/Philosphy/pepsi.0.1411113569.jpg";
+import Image6 from "./../../images/Philosphy/intelligence 3.jpeg";
 
 import Logo1 from "./../../images/Philosphy/Logos/EventFirst.png";
 import Divercity_Alliance from "./../../images/Philosphy/Logos/Divercity_Alliance.png";
@@ -90,7 +94,7 @@ const Philosphy = () => {
 
       {/* Accessibility & Inclusion */}
       <div className="half-width-section">
-        <PImageComponent src={Image2} alt="Image Description" />
+        <PImageComponent src={Image3} alt="Image Description" />
         <HalfWidthContainer>
           We choose to separate accessibility led inclusion with equity and
           diversity within the industry. They do mix however and speak to a more
@@ -109,7 +113,7 @@ const Philosphy = () => {
 
            {/* Sustainability */}
       <div className="half-width-section">
-        <PImageComponent src={Image2} alt="Image Description" />
+        <PImageComponent src={Image4} alt="Scotish Event Campus COP26" />
         <HalfWidthContainer>
         Events have, for too long, been disregarded as a battleground for sustainable business. Now we need to show that, not only can they be a powerful communication resource for showcasing businesses sustainability, but that they can be sustainable in their own right. <br /><br />
  
@@ -127,7 +131,7 @@ const Philosphy = () => {
 
                  {/* The Virtual Experience Economy */}
       <div className="half-width-section">
-        <PImageComponent src={Image2} alt="Image Description" />
+        <PImageComponent src={Image5} alt="AR/VR pictuer of a bus stop" />
         <HalfWidthContainer>
         We are, right now, in the age of the Virtual Experience Economy. A phrase initially coined by our partners at trendwatching.com, but which also provided a natural evolution of The Experience Economy, first explored by Pine & Gilmore in their same named book first published in 1999. <br /><br />
  
