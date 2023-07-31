@@ -10,7 +10,7 @@ import ExperienceLogos from "./ExperienceLogos";
 import ImageComponentHalf from "./ImageComponentHalf";
 import FullWidthParagraph from "./FullWidthParagraphComponent";
 import FullWidthParagraphComponent from "./FullWidthParagraphComponent"; // the new import
-import VerticalScrollCarousel from "./VerticalScrole/VerticalScrollCarousel";
+import VerticalScrollCarousel from "./VerticalScrollCarousel";
 import ThreeColumnImageComponent from "./ThreeColumnImageComponent";
 import Philosphy from "./Philosphy-File/Philosphy.js";
 import DesignBranding from "./Design_Branding/DesignBranding";

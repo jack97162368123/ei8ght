@@ -25,7 +25,7 @@ class Footer extends React.Component {
         </div>
         <div className="footer-content">
           <div className="footer-text">
-            <h2>JOIN THE CLUB!</h2>
+            <h1>JOIN THE CLUB!</h1>
             <p>Email us or call one of us will get back to you as soon as possible.</p>
             <div className="contact-info">
               <a href="mailto:alistair@eightpr.co.uk" className="contact-button">Contact</a>

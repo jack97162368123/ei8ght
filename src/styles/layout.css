@@ -82,7 +82,6 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
 }
 
 .footer-text {
@@ -92,12 +91,11 @@ html {
   justify-content: center;
 }
 
-.footer-text h2 {
+.footer-text h1 {
   /* Your styles for the title here, e.g.: */
   color: #fff;
   margin-top: 2em;
-  margin-bottom: 0;
-  font-size : 1.5em;
+  margin-bottom: 0
 }
 
 .footer-text p {
