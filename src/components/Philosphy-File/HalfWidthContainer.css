@@ -12,6 +12,7 @@
 .content-paragraph {
   padding-top: 3em;
   padding-right: 3em;
+  padding-left: 3em;
   flex-grow: 1; /* The paragraph fills the remaining space */
   color: white !important;
   column-count: 2; /* The content will flow into 2 columns */

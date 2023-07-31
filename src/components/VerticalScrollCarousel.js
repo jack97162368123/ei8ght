@@ -16,36 +16,30 @@ const VerticalScrollCarousel = ({ words }) => {
   };
 
   useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top top",
-        end: () => "+=" + (containerRef.current.offsetHeight),
-        scrub: true,
-        pin: true, // Pin the container during scroll
-        pinSpacing: false, // Disable pin spacing
-      },
-    });
+    const timelines = words.map((_, i) => {
+      const el = elementsRef.current[i];
 
-    tl.to(elementsRef.current, {
-      y: (i) => ((i - words.length / 2) * 500) % (window.innerHeight * 1), // Increase to control vertical distance
-      rotationX: (i) => ((i - words.length / 2) * 360) % 360, // Adjust to control rotation
-    });
-
-    elementsRef.current.forEach((el, i) => {
-      ScrollTrigger.create({
-        trigger: el,
-        start: "top 75%",
-        end: "bottom 75%",
-        onEnter: () => gsap.to(el, { opacity: 1, overwrite: "auto" }),
-        onLeave: () => gsap.to(el, { opacity: 0, overwrite: "auto" }),
-        onEnterBack: () => gsap.to(el, { opacity: 1, overwrite: "auto" }),
-        onLeaveBack: () => gsap.to(el, { opacity: 0, overwrite: "auto" }),
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: el,
+          start: "top top+=" + (window.innerHeight * i), // Each word start time is staggered
+          end: "+=" + window.innerHeight, // Adjust to control the end of scroll
+          scrub: true,
+          pin: true, // Pin the container during scroll
+          pinSpacing: false, // Disable pin spacing
+        },
       });
+
+      tl.fromTo(el, 
+        { y: 0, rotationX: 0, opacity: 0 },
+        { y: "-50%", rotationX: 360, opacity: 1, duration: 1 }) // Increase to control vertical distance and rotation
+        .to(el, { opacity: 0, duration: 1 }); // Adjust to control how long it takes to fade out
+
+      return tl;
     });
 
     return () => {
-      tl.kill();
+      timelines.forEach(tl => tl.kill());
       ScrollTrigger.getAll().forEach((st) => st.kill());
     };
   }, [words]);
@@ -57,7 +51,6 @@ const VerticalScrollCarousel = ({ words }) => {
           className="carousel-element"
           key={index}
           ref={addToRefs}
-          style={{ opacity: 0 }} // Initially all words are hidden
         >
           {word}
         </div>

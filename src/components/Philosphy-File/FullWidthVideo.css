@@ -14,6 +14,7 @@
   height: 100%;
   object-fit: cover;
   border-radius: 30px;
+  z-index: 1; /* Added */
 }
 
 .full-width-column {
@@ -26,11 +27,25 @@
   margin: 0;
   color: white;
   font-size: 6em;
+  z-index: 2; /* Added */
+}
+
+.video-quote {
+  position: absolute;
+  top: 15%; /* adjust as needed */
+  left: 20px; /* adjust as needed */
+  color: white;
+  font-size: 2em; /* adjust as needed */
+  z-index: 2; /* Added */
 }
 
 @media (max-width: 768px) {
   .video-title {
     font-size: 3em; /* adjust this value as needed */
     padding: .2em; /* adjust this value as needed */
+  }
+
+  .video-quote {
+    font-size: 1.5em; /* adjust as needed */
   }
 }

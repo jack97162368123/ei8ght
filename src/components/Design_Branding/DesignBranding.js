@@ -8,10 +8,12 @@ import "./../Philosphy-File/Philosphy.css";
 
 
 import DesginBranding from "./../../images/DesignBranding/DesignBranding.svg";
-import Row1 from "./../../images/DesignBranding/Images/Rowing1.png";
+import Umbrella from "../../images/DesignBranding/Images/Unbrela.png";
 import House from "./../../images/DesignBranding/Images/ConcertHall.png";
 import People_Drinks from "./../../images/DesignBranding/Images/People_Drinks.png";
 import NOEA from "./../../images/DesignBranding/Images/NOEA.png";
+import Slime from "./../../images/DesignBranding/Images/1-toy-slime-science-photo-library.jpeg";
+import Slimelogo from "./../../images/DesignBranding/Images/Thelondonslime.png";
 import MashMedia from "./../../images/DesignBranding/Images/MashMedia.png";
 
 const DesignBranding = () => {
@@ -20,7 +22,7 @@ const DesignBranding = () => {
       <PImageComponent src={DesginBranding} alt="Desgin and Branding SVG" />
 
 
-      <DBHalfWidthContainer imageSrc={Row1}>
+      <DBHalfWidthContainer imageSrc={Umbrella}>
         This is design and branding EIGHT-style. Building on intelligence and audience insight before we let loose with the creatives.
       </DBHalfWidthContainer>
       
@@ -39,6 +41,13 @@ const DesignBranding = () => {
         The role of brand is increasingly important when it comes to how event planners select the people that they choose to work with. They don’t just want expertise and experience, that’s a given, they want brand alignment and shared values too. EIGHT gets this.
       </DBHalfWidthContainer>
       
+      
+      <DBHalfWidthContainer imageSrc={Slimelogo}>
+        Place holder text
+      </DBHalfWidthContainer>
+
+      <PImageComponent src={Slime} alt="Slime in hand" />
+
      
     </div>
   );

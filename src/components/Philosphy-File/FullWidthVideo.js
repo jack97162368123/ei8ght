@@ -35,6 +35,7 @@ const FullWidthVideo = ({ videoSrc }) => {
                 Your browser does not support the video tag.
             </video>
             <h1 className="video-title">Philosophy</h1>
+            <p className="video-quote">"THE UNEXAMINED LIFE IS NOT WORTH LIVING" - Socrates</p>
         </div>
     );
 };

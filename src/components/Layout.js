@@ -32,8 +32,8 @@ import About_EIGHT from "../../static/About_EIGHT.svg";
 
 // Meet the Team
 
-import Happy from "../../static/Happy.jpg";
-import TeamImage from "../../static/anna-samoylova-w55SpMmoPgE-unsplash.jpg";
+import Happy from "../images/TopImages/shutterstock_247713031.jpg";
+import TeamImage from "../images/TopImages/shutterstock_794460844.jpg";
 
 const words = ["Share", "Connect", "Learn"];
 
@@ -61,6 +61,7 @@ const Layout = ({
         </div>
 
         <div className="full-width-column" colSpan="2">
+
           <VerticalScrollCarousel words={words} />{" "}
         </div>
 

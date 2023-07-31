@@ -34,7 +34,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        width: 100%!important;
+        max-width: 100%!important;
         height: 15vw;
     }
 
@@ -47,13 +47,14 @@
     .logos {
         justify-content: flex-end;
         padding: .2em 0;
+        padding-right: 3em;
+
     }
 
     .logos img {
         margin-left: 10px;
-        max-height: 40px;
+        max-height: 6vw;
         width: auto;
-        padding-right: 3em;
         /* other styles for the logos */
     }
 }
