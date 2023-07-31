@@ -4,8 +4,6 @@ import Bg from "./Bg";
 import NavBar from "./NavBar";
 import Paragraph from "./Paragraph";
 import FullWidthComponent from ".//FullWidthComponent";
-import WelcomeComponent from "./WelcomeComponent";
-import EightComponent from "./EightComponent";
 import ExperienceLogos from "./ExperienceLogos";
 import ImageComponentHalf from "./ImageComponentHalf";
 import VerticalScrollCarousel from "./VerticalScrole/VerticalScrollCarousel";
@@ -14,6 +12,7 @@ import Philosphy from "./Philosphy-File/Philosphy.js";
 import DesignBranding from "./Design_Branding/DesignBranding";
 import Footer from "./Footer";
 import ThreeColumnGrid from "./About/ThreeColumnGrid";
+import WelcomeEightComponent from "./WelcomeEightComponent";
 
 // Styles
 
@@ -49,11 +48,7 @@ const Layout = ({
     <main className="content">
       <div className="grid-container">
         <div id="home" className="left-column">
-          <WelcomeComponent />
-        </div>
-
-        <div className="right-column">
-          <EightComponent />
+        <WelcomeEightComponent welcomeText="Welcome to" contentText="EI8HT" />
         </div>
 
         <div className="full-width-column" colSpan="2">

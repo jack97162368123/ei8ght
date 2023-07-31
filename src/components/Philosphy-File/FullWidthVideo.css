@@ -3,7 +3,6 @@
   width: auto;
   height: auto;
   padding-bottom: 56.25%; /* For a 16:9 aspect ratio */
-  overflow: hidden;
 }
 
 .background-video {
@@ -46,6 +45,8 @@
   }
 
   .video-quote {
-    font-size: 1.5em; /* adjust as needed */
+    font-size: 1em; /* adjust as needed */
+    top: 25%; /* adjust as needed */
+    left: 10px; /* adjust as needed */
   }
 }

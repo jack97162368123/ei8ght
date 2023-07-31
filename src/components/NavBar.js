@@ -1,58 +1,132 @@
-import React, { useState, useEffect } from 'react';
-import EightLogo from '/static/8_Logo.svg'; // replace this with your logo path
-import CustomHamburgerIcon from '/static/burger-menu-svgrepo-com.svg'; // replace this with your custom hamburger icon path
-import '../styles/NavBar.css';
+import React, { useState, useEffect } from "react";
+import { slide as BurgerMenu } from "react-burger-menu";
+import EightLogo from "../images/Navbar/8_Logo.svg"; // replace this with your logo path
+import CustomHamburgerIcon from "../images/Navbar/NAV.png"; // replace this with your custom hamburger icon path
+import "../styles/NavBar.css";
 
 const NavBar = () => {
-  const [showMenu, setShowMenu] = useState(false);
   const [windowWidth, setWindowWidth] = useState(0);
-  const [animateIn, setAnimateIn] = useState(false); // new state variable
 
   useEffect(() => {
     const handleResize = () => {
-      setWindowWidth(window.innerWidth);
+      const newWindowWidth = window.innerWidth;
+      setWindowWidth(newWindowWidth);
     };
 
-    setWindowWidth(window.innerWidth);
+    handleResize();
 
-    // animate in if window width is greater than 768
-    if (windowWidth > 768) {
-      setAnimateIn(true);
-    }
-
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
-  }, [windowWidth]); // added windowWidth as a dependency
+  }, []);
 
-  const toggleMenu = () => {
-    setShowMenu(!showMenu);
-  };
+  const menuItems = [
+    { href: "#home", text: "Home" },
+    { href: "#design-branding", text: "Design & Branding" },
+    { href: "#philosophy", text: "Philosophy" },
+    { href: "#About", text: "About Eight" },
+  ];
 
   return (
-    <nav className={`nav ${showMenu ? 'show' : ''} ${animateIn ? 'animate-in' : ''}`}>
-      <div className="nav__logo">
-        {windowWidth <= 768 && (
-          <img src={EightLogo} alt="Logo" className="nav__logo-mobile" />
-        )}
-        {windowWidth > 768 && (
-          <img src={EightLogo} alt="Logo" className="nav__logo-desktop" />
-        )}
-      </div>
-      <ul className={`nav__links ${showMenu ? 'show' : ''}`}>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#design-branding">Design & Branding</a></li>
-        <li><a href="#philosophy">Philosophy</a></li>
-        <li><a href="#About">About Eight</a></li>
-      </ul>
-      {windowWidth <= 768 && (
-        <button className="nav__burger-menu" onClick={toggleMenu} aria-label="Toggle Menu">
-          <img src={CustomHamburgerIcon} alt="Burger Icon" className="nav__burger-icon" />
-        </button>
+    <>
+      {windowWidth <= 768 ? (
+        <nav className="nav">
+          <div className="nav__logo">
+            <img src={EightLogo} alt="Logo" className="nav__logo-mobile" />
+          </div>
+          <BurgerMenu
+            customBurgerIcon={
+              <div style={{ width: "20px", height: "20px" }}>
+                <img
+                  src={CustomHamburgerIcon}
+                  alt="Menu"
+                  style={{ width: "10%", height: "" }}
+                />
+              </div>
+            }
+            styles={{
+              bmMenuWrap: {
+                background: "#ffffff", 
+                borderRadius: "30px",
+                paddingTop: "30px",
+                width: "calc(100% - 16px)", // reduce the width by 16px
+                marginTop: "55px",
+                marginRight: "8px",
+                marginLeft: "8px",
+              },
+
+              bmMenu: {
+                width: "100%",
+                transition: "transform 0.5s ease-in-out", // Add this line
+                pading: "0px",
+                marginright: "0px",
+                textAlign: "right", // Add this line
+                paddingRight: "10px",
+              },
+
+              bmCrossButton: {
+                height: "24px",
+                width: "24px",
+                right: "25px",
+                top: "10px",
+              },
+              bmCross: {
+                height: "24px",
+                width: "3px",
+                background: "#ef0690",
+              },
+
+              bmItem: {
+                display: "inline-block",
+                textDecoration: "none",
+                marginBottom: "10px",
+                marginTop: "1em",
+                color: "#ef0690",
+                transition: "color 0.2s",
+                fontSize: "1.3em",
+              },
+              bmOverlay: {
+                background: "transparent",
+              },
+              bmItemList: {
+                paddingLeft: "45%", // Adjust this value as needed
+                margin: "0",
+                width: "50%",
+              },
+              bmBurgerButton: {
+                position: "fixed",
+                width: "100%",
+                height: "",
+                right: "-80%", // Adjust this to move the button to the right
+                top: "25px", // Adjust this to move the button down from the top
+              },
+            }}
+            right // This makes the menu appear from the right side
+          >
+            {menuItems.map((item, index) => (
+              <a key={index} href={item.href}>
+                {item.text}
+              </a>
+            ))}
+          </BurgerMenu>
+        </nav>
+      ) : (
+        <nav className="nav">
+          <div className="nav__logo">
+            <img src={EightLogo} alt="Logo" className="nav__logo-desktop" />
+          </div>
+          <ul className="nav__links">
+            {menuItems.map((item, index) => (
+              <li key={index}>
+                <a href={item.href}>{item.text}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
       )}
-    </nav>
+    </>
   );
 };
 

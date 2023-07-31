@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/Bg.css';
-import bgImage from '../../static/Bg.svg';
+import bgImage from '../images/Navbar/Bg.svg';
 
 
 const Bg = () => {

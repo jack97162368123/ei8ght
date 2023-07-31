@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { gsap } from 'gsap'
-import Logo from "../../static/8_Logo.svg"
+import Logo from "../images/Navbar/8_Logo.svg"
 import TwitterIcon from '@material-ui/icons/Twitter'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import InstagramIcon from '@material-ui/icons/Instagram'
