@@ -2,7 +2,7 @@
     display: grid;
     width: 100%;
     grid-template-columns: 1fr 1fr; /* two equal-width columns */
-    gap: 0; /* space between columns */
+    gap: .5em; /* space between columns */
     box-sizing: border-box;
     overflow: hidden;
 }

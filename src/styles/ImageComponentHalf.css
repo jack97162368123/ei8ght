@@ -30,6 +30,8 @@
     width: 100%;
     object-fit: fill;
     height: auto;
+    border-radius: 30px;
+
   }
 
   .image-container-half svg {

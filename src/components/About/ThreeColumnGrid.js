@@ -2,9 +2,9 @@
 
 import React from "react";
 import "../About/ThreeColumnGrid.css";
-import PsychologyIcon from "@mui/icons-material/Psychology";
-import AdfScannerIcon from "@mui/icons-material/AdfScanner";
-import SportsMartialArtsIcon from "@mui/icons-material/SportsMartialArts";
+import PsychologyImage from "../../images/Bottomabout/einstein.jpeg";
+import SportsMartialArtsImage from "../../images/Bottomabout/shutterstock_1696341169.jpg";
+import AdfScannerImage from "../../images/Bottomabout/shutterstock_1389384308.jpg";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -58,11 +58,10 @@ class ThreeColumnGrid extends React.Component {
     return (
       <div className="About-Section">
         <div className="main-item" ref={this.column1}>
-          <PsychologyIcon className="icon" />
-
+          <img src={SportsMartialArtsImage} className="image-icon" alt="Psychology" />
           <b>Intelligence</b>
           <div className="aboutparagraph">
-            <p>
+          <p>
               Everyone at EIGHT is committed to what we call the 70/30
               principle: that 30% of everything we do will be non-client
               related. Intelligence gathering. <br />
@@ -80,10 +79,10 @@ class ThreeColumnGrid extends React.Component {
           </div>
         </div>
         <div className="main-item" ref={this.column2}>
-          <SportsMartialArtsIcon className="icon" />
+          <img src={PsychologyImage} className="image-icon" alt="Sports Martial Arts" />
           <b>Creativity</b>
           <div className="aboutparagraph">
-            <p>
+          <p>
               Albert Einstein once said, ‘Creativity is Intelligence having
               fun’. Its why we harvest so much information because creativity
               needs to add value, to be continual and inexhaustible; that’s why
@@ -94,10 +93,10 @@ class ThreeColumnGrid extends React.Component {
           </div>
         </div>
         <div className="main-item" ref={this.column3}>
-          <AdfScannerIcon className="icon" />
+          <img src={AdfScannerImage} className="image-icon" alt="Adf Scanner" />
           <b>The Club</b>
           <div className="aboutparagraph">
-            <p>Because we spend so much time in the marketplace, we’ve built up a large network of people, organisations and business that add value to us and our clients. <br /><br />
+          <p>Because we spend so much time in the marketplace, we’ve built up a large network of people, organisations and business that add value to us and our clients. <br /><br />
             This could be value gained through information, partnerships, contacts, or event direct business. But it’s all added value, a perk of being a client. We call it The Club.</p>
           </div>
         </div>

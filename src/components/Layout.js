@@ -8,8 +8,6 @@ import WelcomeComponent from "./WelcomeComponent";
 import EightComponent from "./EightComponent";
 import ExperienceLogos from "./ExperienceLogos";
 import ImageComponentHalf from "./ImageComponentHalf";
-import FullWidthParagraph from "./FullWidthParagraphComponent";
-import FullWidthParagraphComponent from "./FullWidthParagraphComponent"; // the new import
 import VerticalScrollCarousel from "./VerticalScrole/VerticalScrollCarousel";
 import ThreeColumnImageComponent from "./ThreeColumnImageComponent";
 import Philosphy from "./Philosphy-File/Philosphy.js";
@@ -130,9 +128,7 @@ const Layout = ({
           <FullWidthComponent svgImage={svgImage4} />{" "}
         </div>
 
-        <div className="full-width-column" colSpan="2">
-          <FullWidthParagraph text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in" />
-        </div>
+       
 
         <div className="full-width-column" colSpan="2">
           <ExperienceLogos />

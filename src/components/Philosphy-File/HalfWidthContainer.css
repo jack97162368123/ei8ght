@@ -6,6 +6,9 @@
   background-color: #95a5a6;
   height: auto;
   border-radius: 30px;
+  margin-bottom: .5em;
+  margin-top: .5em;
+
   position: relative; /* Add this line */
 }
 
