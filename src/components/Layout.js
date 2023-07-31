@@ -34,6 +34,8 @@ import About_EIGHT from "../../static/About_EIGHT.svg";
 
 import Happy from "../images/TopImages/shutterstock_247713031.jpg";
 import TeamImage from "../images/TopImages/shutterstock_794460844.jpg";
+import svgImage5 from "../images/TopImages/Artboard 1.png";
+
 
 const words = ["Share", "Connect", "Learn"];
 
@@ -83,7 +85,7 @@ const Layout = ({
 
         {imageColumn === "left" && (
           <div className="left-column">
-            <ImageComponentHalf src={Happy} alt="Alistair Turner" />
+            <ImageComponentHalf src={svgImage5} alt="Alistair Turner" />
           </div>
         )}
 

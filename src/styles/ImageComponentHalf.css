@@ -11,8 +11,8 @@
   
   .image-container-half {
     position: relative;
-    width: auto;
-    height: 100%;
+    width: 100%;
+    height: auto;
     display: flex;
   }
   
@@ -27,11 +27,20 @@
     top: 0;
     left: 0;
     bottom: 0;
-    
     width: 100%;
     object-fit: fill;
-    height: 100%;
+    height: auto;
   }
+
+  .image-container-half svg {
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    /* preserveAspectRatio: none; This can be necessary for correct scaling of SVGs */
+}
   
   @media (max-width: 768px) {
     .grid-item-half.image-half {
