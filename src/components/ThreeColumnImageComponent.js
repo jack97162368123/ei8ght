@@ -84,7 +84,7 @@ const ThreeColumnImageComponent = () => {
     src={Person6}
     alt="Nyomi Rose"
     title="Nyomi Rose"
-    text="XXXX"
+    text="Social Media Manager"
     url="https://www.linkedin.com/in/nyomirose/"
   />
 </div>

@@ -11,7 +11,13 @@
 
 }
 
+.MeetTeam-large-text p {
+  font-size: 2.0rem;
+}
 
+#specific-paragraph {
+  font-size: 2.0rem;
+}
 
 .bg-color {
   background-color: #303d4e80;

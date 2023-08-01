@@ -3,7 +3,7 @@
 import React from "react";
 import "../About/ThreeColumnGrid.css";
 import PsychologyImage from "../../images/Bottomabout/einstein.jpeg";
-import SportsMartialArtsImage from "../../images/Bottomabout/shutterstock_1696341169.jpg";
+import SportsMartialArtsImage from "../../images/Bottomabout/intelligence 3.jpeg";
 import AdfScannerImage from "../../images/Bottomabout/shutterstock_1389384308.jpg";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

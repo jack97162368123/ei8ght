@@ -64,21 +64,35 @@ html {
   background: #333;
   color: #fff;
   display: flex; /* keep this line */
-  justify-content: space-around; /* keep this line */
+  justify-content: space-between; /* keep this line */
   align-items: center; /* keep this line */
   padding: 20px; /* keep this line */
   flex-wrap: wrap; /* keep this line */
 }
 
+
 .logo {
-  width: 10em;
+  width: 400px;
+  padding-right: 15em;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  padding-left: 5em;
+
+}
+
+.logo img {
+  width: 100%;
   height: auto;
+  max-width: 50em;
   object-fit: contain;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
 }
 
 .footer-content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   

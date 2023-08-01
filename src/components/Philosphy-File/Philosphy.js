@@ -14,13 +14,13 @@ import Image1 from "./../../images/Philosphy/Image1.png";
 import Image2 from "./../../images/Philosphy/Image2.png";
 import Image3 from "./../../images/Philosphy/shutterstock_1034738296.jpg";
 import Image4 from "./../../images/Philosphy/Scottish-Event-Campus-during-COP26-November-2021-800x423-362d9c2b22.png";
-import Image5 from "./../../images/Philosphy/pepsi.0.1411113569.jpg";
-import Image6 from "./../../images/Philosphy/intelligence 3.jpeg";
 
 import Logo1 from "./../../images/Philosphy/Logos/EventFirst.png";
 import Divercity_Alliance from "./../../images/Philosphy/Logos/Divercity_Alliance.png";
 import DIVERSE_SPEAKER_BUREAU from "./../../images/Philosphy/Logos/DIVERSE_SPEAKER_BUREAU.png";
 import CO2Logo from "./../../images/Philosphy/Logos/CO2Logo.webp";
+import ARBussstop from "./../../images/Philosphy/ARBussstop.gif";
+
 
 const Philosphy = () => {
   const logosFutureGenerations = [{ src: Logo1, alt: "Logo 1" }];
@@ -44,6 +44,7 @@ const Philosphy = () => {
           <div className="philosphy-section"></div>
           
 
+          <TitleAndLogos title="Future Generations" logos={logosFutureGenerations} />{" "}
 
       {/* Future Generations */}
       <div className="half-width-section">
@@ -58,9 +59,9 @@ const Philosphy = () => {
           urgent subjects.
         </HalfWidthContainer>
       </div>
-          <TitleAndLogos title="Future Generations" logos={logosFutureGenerations} />{" "}
           
 
+      <TitleAndLogos title="Accessibility & Inclusion" logos={logos} />{" "}
 
 
       {/* Accessibility & Inclusion */}
@@ -87,9 +88,9 @@ const Philosphy = () => {
           designed to communicate better to those with dyslexia
         </HalfWidthContainer>
       </div>
-          <TitleAndLogos title="Accessibility & Inclusion" logos={logos} />{" "}
           
 
+      <TitleAndLogos title="Diversity, Equity & Inclusion" logos={logosDiversityEquityInclusion} />{" "}
 
 
       {/* Accessibility & Inclusion */}
@@ -107,9 +108,9 @@ const Philosphy = () => {
           opinion.
         </HalfWidthContainer>
       </div>
-          <TitleAndLogos title="Diversity, Equity & Inclusion" logos={logosDiversityEquityInclusion} />{" "}
 
-          
+      <TitleAndLogos title="Sustainability" logos={logosSustainability} />{" "}
+
 
            {/* Sustainability */}
       <div className="half-width-section">
@@ -125,13 +126,13 @@ const Philosphy = () => {
  
         </HalfWidthContainer>
       </div>
-          <TitleAndLogos title="Sustainability" logos={logosSustainability} />{" "}
 
+      <TitleAndLogos title="The Virtual Experience Economy" logos={logos} />{" "}
 
 
                  {/* The Virtual Experience Economy */}
       <div className="half-width-section">
-        <PImageComponent src={Image5} alt="AR/VR pictuer of a bus stop" />
+        <PImageComponent src={ARBussstop} alt="AR/VR pictuer of a bus stop" />
         <HalfWidthContainer>
         We are, right now, in the age of the Virtual Experience Economy. A phrase initially coined by our partners at trendwatching.com, but which also provided a natural evolution of The Experience Economy, first explored by Pine & Gilmore in their same named book first published in 1999. <br /><br />
  
@@ -144,7 +145,6 @@ We remain key influencers in this era of experience. In short, you heard it here
  
         </HalfWidthContainer>
       </div>
-          <TitleAndLogos title="The Virtual Experience Economy" logos={logos} />{" "}
           
 
 

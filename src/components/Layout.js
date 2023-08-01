@@ -13,6 +13,9 @@ import DesignBranding from "./Design_Branding/DesignBranding";
 import Footer from "./Footer";
 import ThreeColumnGrid from "./About/ThreeColumnGrid";
 import WelcomeEightComponent from "./WelcomeEightComponent";
+// eslint-disable-next-line react/jsx-pascal-case
+import Seo from "./seo.js"; // Import the SEO component
+
 
 // Styles
 
@@ -23,6 +26,7 @@ import "swiper/swiper-bundle.css";
 // Brake Pages
 import svgImage1 from "../../static/mostexciting.svg";
 import svgImage2 from "../../static/About_EIGHT.svg";
+
 import meetTheTeamImage from "../../static/meet-the-team.svg";
 import svgImage4 from "../../static/Experence.svg";
 import About_EIGHT from "../../static/About_EIGHT.svg";
@@ -32,7 +36,7 @@ import About_EIGHT from "../../static/About_EIGHT.svg";
 import Happy from "../images/TopImages/shutterstock_247713031.jpg";
 import TeamImage from "../images/TopImages/shutterstock_794460844.jpg";
 import svgImage5 from "../images/TopImages/Artboard 1.png";
-
+import Swote_Top from "../images/TopImages/Swote_Top.png";
 
 const words = ["Share", "Connect", "Learn"];
 
@@ -43,14 +47,20 @@ const Layout = ({
   children,
 }) => (
   <div className="layout">
+    
+    
+    
+    
+    <Seo
+      title="Eight PR & Marketing - Creating Empathetic and Creative Experiences"
+      description="EIGHT PR & Marketing is a specialist agency with a mission to blend business with pleasure in the realm of events and experience marketing. Our focus is empathetic marketing and creative campaigns that connect deeply with audiences. EIGHT is more than a number, it's a club, a network, and a promise of quality and connection."
+    />
     <Bg />
     <NavBar />
     <main className="content">
-
-    <WelcomeEightComponent welcomeText="Welcome to" contentText="EI8HT" />
+      <WelcomeEightComponent welcomeText="Welcome to" contentText="EI8HT" />
 
       <div className="grid-container">
-       
         {/* <div id="home" className="FullWidthComponent">
         <WelcomeEightComponent welcomeText="Welcome to" contentText="EI8HT" />
         </div> */}
@@ -60,7 +70,6 @@ const Layout = ({
         </div>
 
         <div className="full-width-column" colSpan="2">
-
           <VerticalScrollCarousel words={words} />{" "}
         </div>
 
@@ -101,12 +110,15 @@ const Layout = ({
         )}
 
         <div className="full-width-column" colSpan="2">
-          <FullWidthComponent svgImage={meetTheTeamImage} />{" "}
+          <FullWidthComponent svgImage={meetTheTeamImage} />
         </div>
 
-        {paragraphColumn === "left" && (
+        {imageColumn === "left" && (
           <div className="left-column">
-            <Paragraph text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco </br> </br> laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in </br> </br> reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in </br> </br> reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.ore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident" />
+            <ImageComponentHalf
+              src={Swote_Top}
+              alt="Qwote saying IF YOU WANT TO LIFT YOURSELF UP LIFT UP SOMEONE ELSE Booker T Washington"
+            />
           </div>
         )}
 
@@ -127,8 +139,6 @@ const Layout = ({
           <FullWidthComponent svgImage={svgImage4} />{" "}
         </div>
 
-       
-
         <div className="full-width-column" colSpan="2">
           <ExperienceLogos />
         </div>
@@ -146,7 +156,7 @@ const Layout = ({
         </div>
 
         <div className="full-width-column" colSpan="2">
-        <ThreeColumnGrid />
+          <ThreeColumnGrid />
         </div>
 
         <div className="full-width-column" colSpan="2">

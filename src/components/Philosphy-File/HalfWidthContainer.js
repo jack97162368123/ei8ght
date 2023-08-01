@@ -16,7 +16,7 @@ const HalfWidthContainer = ({ children, topRightText = "" }) => {
             scrollTrigger: {
                 trigger: containerRef.current,
                 start: 'top bottom', // when the top of the element hits the bottom of the viewport
-                end: 'bottom bottom', // when the bottom of the element hits the top of the viewport
+                end: 'top center', // when the bottom of the element hits the top of the viewport
                 scrub: true
             }
         });
