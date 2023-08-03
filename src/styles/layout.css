@@ -41,6 +41,10 @@ html {
   justify-content: flex-start; /* aligns items to the top */
 }
 
+
+
+
+
 .left-column {
   grid-column: 1;
   max-width: 100%;
@@ -57,6 +61,19 @@ html {
   grid-column: 1 / span 2;
   max-width: 100%;
 }
+
+.loading-component {
+  z-index: 1000; /* A high value to make sure it's above other elements */
+  position: fixed; /* Or absolute, depending on your needs */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: opacity 2s ease;
+  background-color: rgba(255, 255, 255, 0.8); /* Optional: semi-transparent background */
+}
+
+
 
 .footer {
   height: auto; /* adjust according to your footer content */

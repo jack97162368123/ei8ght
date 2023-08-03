@@ -1,5 +1,5 @@
-// Purpose: Layout component for the website
-import React from "react";
+import React, { useState, useEffect } from 'react';
+import Loading from './loading/Loading'; // Make sure this path is correct
 import Bg from "./Bg";
 import NavBar from "./NavBar";
 import Paragraph from "./Paragraph";
@@ -13,25 +13,18 @@ import DesignBranding from "./Design_Branding/DesignBranding";
 import Footer from "./Footer";
 import ThreeColumnGrid from "./About/ThreeColumnGrid";
 import WelcomeEightComponent from "./WelcomeEightComponent";
-// eslint-disable-next-line react/jsx-pascal-case
-import Seo from "./seo.js"; // Import the SEO component
-
-
-// Styles
+import Seo from "./seo.js";
 
 import "../styles/layout.css";
 import "../styles/grid.css";
 import "swiper/swiper-bundle.css";
 
-// Brake Pages
 import svgImage1 from "../../static/mostexciting.svg";
 import svgImage2 from "../../static/About_EIGHT.svg";
 
 import meetTheTeamImage from "../../static/meet-the-team.svg";
 import svgImage4 from "../../static/Experence.svg";
 import About_EIGHT from "../../static/About_EIGHT.svg";
-
-// Meet the Team
 
 import Happy from "../images/TopImages/shutterstock_247713031.jpg";
 import TeamImage from "../images/TopImages/shutterstock_794460844.jpg";
@@ -40,25 +33,47 @@ import Swote_Top from "../images/TopImages/Swote_Top.png";
 
 const words = ["Share", "Connect", "Learn"];
 
-const Layout = ({
-  paragraphColumn = "left",
-  titleColumn = "left",
-  imageColumn = "left",
-  children,
-}) => (
-  <div className="layout">
-    
-    
-    
-    
-    <Seo
-      title="Eight PR & Marketing - Creating Empathetic and Creative Experiences"
-      description="EIGHT PR & Marketing is a specialist agency with a mission to blend business with pleasure in the realm of events and experience marketing. Our focus is empathetic marketing and creative campaigns that connect deeply with audiences. EIGHT is more than a number, it's a club, a network, and a promise of quality and connection."
-    />
-    <Bg />
-    <NavBar />
-    <main className="content">
-      <WelcomeEightComponent welcomeText="Welcome to" contentText="EI8HT" />
+const Layout = ({ paragraphColumn = "left", titleColumn = "left", imageColumn = "left", children }) => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [opacity, setOpacity] = useState(1);
+
+  useEffect(() => {
+    // Minimum duration timer
+    const minimumDurationTimer = setTimeout(() => {
+      // If the page has already loaded, start the fade-out
+      if (document.readyState === 'complete') {
+        startFadeOut();
+      } else {
+        // If the page hasn't loaded yet, wait for the load event
+        window.addEventListener('load', startFadeOut);
+      }
+    }, 2000); // Minimum duration of 2 seconds
+
+    const startFadeOut = () => {
+      setOpacity(0);
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 2000); // Duration of the fade transition
+    };
+
+    return () => {
+      window.removeEventListener('load', startFadeOut);
+      clearTimeout(minimumDurationTimer);
+    };
+  }, []);
+
+  return (
+    <div className="layout">
+      {isLoading && <Loading opacity={opacity} />}
+
+          <Seo
+            title="Eight PR & Marketing - Creating Empathetic and Creative Experiences"
+            description="EIGHT PR & Marketing is a specialist agency with a mission to blend business with pleasure in the realm of events and experience marketing. Our focus is empathetic marketing and creative campaigns that connect deeply with audiences. EIGHT is more than a number, it's a club, a network, and a promise of quality and connection."
+          />
+          <Bg />
+          <NavBar />
+          <main className="content">
+            <WelcomeEightComponent welcomeText="Welcome to" contentText="EI8HT" />
 
       <div className="grid-container">
       
@@ -164,8 +179,9 @@ const Layout = ({
           </div>
         </div>
       </div>
-    </main>
-  </div>
-);
+      </main>
+    </div>
+  );
+};
 
 export default Layout;
