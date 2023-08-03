@@ -5,7 +5,7 @@ import './VerticalScrollCarousel.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const words = ['People.', 'Places.', 'Personality'];
+const words = ['People', 'Places', 'Personality'];
 
 const VerticalScrollCarousel = () => {
   const sectionRef = useRef(null);
