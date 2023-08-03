@@ -60,6 +60,7 @@ html {
 .full-width-column {
   grid-column: 1 / span 2;
   max-width: 100%;
+  z-index: -1;
 }
 
 .loading-component {
