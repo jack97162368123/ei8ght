@@ -15,7 +15,7 @@ const Loading = ({ opacity }) => {
   const defaultOptions = {
     loop: true,
     autoplay: true,
-    animationData: animationData, // Use the fetched data
+    animationData: animationData,
     rendererSettings: {
       preserveAspectRatio: 'xMidYMid slice',
     },
@@ -29,24 +29,34 @@ const Loading = ({ opacity }) => {
     top: 0,
     left: 0,
     display: 'flex',
-    flexDirection: 'column', // Change to column direction
+    flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    transition: 'opacity 2s cubic-bezier(0.25, 1, 0.5, 1)', // Custom cubic-bezier curve
-    opacity: opacity, // Transition from 1 to 0
+    transition: 'opacity 2s cubic-bezier(0.25, 1, 0.5, 1)',
+    opacity: opacity,
+  };
+
+  const animationContainerStyle = {
+    height: '80%', // Reserve 80% of the container's height for the animation
+    width: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   };
 
   const titleStyle = {
-    color: '#FFFFFF', // You can customize the color
-    fontSize: '4em', // You can customize the font size
+    color: '#FFFFFF',
+    fontSize: '4em',
     textAlign: 'center',
-    marginTop: '20px', // Spacing between the animation and the title
+    marginTop: '20px',
     fontWeight: 'bold',
   };
 
   return (
     <div style={loadingStyle}>
-      {animationData && <Lottie options={defaultOptions} height="30%" width="30%" />}
+      <div style={animationContainerStyle}>
+        {animationData && <Lottie options={defaultOptions} height="30%" width="30%" />}
+      </div>
       <div style={titleStyle}>READY?</div>
     </div>
   );
