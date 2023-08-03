@@ -14,7 +14,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-image`,
-    `gatsby-plugin-sitemap`, // added sitemap plugin
+    `gatsby-plugin-sitemap`, 
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -25,8 +25,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-robots-txt`,
       options: {
-        host: `http://www.eightpr.co.uk`, // replace with your site url
-        sitemap: `http://www.eightpr.co.uk/sitemap.xml`, // replace with your sitemap url
+        host: `http://www.eightpr.co.uk`, 
+        sitemap: `http://www.eightpr.co.uk/sitemap.xml`, 
         policy: [{ userAgent: '*', allow: '/' }]
       }
     }

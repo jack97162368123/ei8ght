@@ -55,6 +55,7 @@ html {
 
 .full-width-column {
   grid-column: 1 / span 2;
+  max-width: 100%;
 }
 
 .footer {

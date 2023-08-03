@@ -25,13 +25,13 @@ const DBHalfWidthContainer = ({ children, topRightText = "", imageSrc }) => {
 
     return (
         <div ref={containerRef} className="half-width-container-DB">
-            <p className="top-right-paragraph-DB" dangerouslySetInnerHTML={{ __html: formattedText }}></p>
-            <div className="content-paragraph-DB">
-                {children}
-            </div>
-            <img ref={imageRef} src={imageSrc} className="parallax-image" alt="description" />
+          <p className="top-right-paragraph-DB" dangerouslySetInnerHTML={{ __html: formattedText }}></p>
+          <div className="content-paragraph-DB">
+            {children}
+          </div>
+          {imageSrc && <img ref={imageRef} src={imageSrc} className="parallax-image" alt="description" />}
         </div>
-    );
-};
+      );
+    };
 
 export default DBHalfWidthContainer;

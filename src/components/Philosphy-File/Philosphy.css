@@ -1,6 +1,6 @@
 .half-width-section {
     display: grid;
-    width: 100%;
+    max-width: 100%;
     grid-template-columns: 1fr 1fr; /* two equal-width columns */
     gap: .5em; /* space between columns */
     box-sizing: border-box;

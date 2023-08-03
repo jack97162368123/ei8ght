@@ -61,9 +61,7 @@ const Layout = ({
       <WelcomeEightComponent welcomeText="Welcome to" contentText="EI8HT" />
 
       <div className="grid-container">
-        {/* <div id="home" className="FullWidthComponent">
-        <WelcomeEightComponent welcomeText="Welcome to" contentText="EI8HT" />
-        </div> */}
+      
 
         <div className="full-width-column" colSpan="2">
           <FullWidthComponent svgImage={svgImage1} />{" "}
