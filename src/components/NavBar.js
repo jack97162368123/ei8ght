@@ -37,8 +37,74 @@ const NavBar = () => {
             <img src={EightLogo} alt="Logo" className="nav__logo-mobile" />
           </div>
           <BurgerMenu
-            // ...BurgerMenu properties
-          >
+            customBurgerIcon={
+              <div style={{ width: "20px", height: "20px" }}>
+                <img
+                  src={CustomHamburgerIcon}
+                  alt="Menu"
+                  style={{ width: "10%", height: "" }}
+                />
+              </div>
+            }
+            styles={{
+              bmMenuWrap: {
+                background: "#ffffff", 
+                borderRadius: "30px",
+                paddingTop: "30px",
+                width: "calc(100% - 16px)", // reduce the width by 16px
+                marginTop: "55px",
+                marginRight: "8px",
+                marginLeft: "8px",
+              },
+
+              bmMenu: {
+                width: "100%",
+                transition: "transform 0.5s ease-in-out", // Add this line
+                pading: "0px",
+                marginright: "0px",
+                textAlign: "right", // Add this line
+                paddingRight: "10px",
+              },
+
+              bmCrossButton: {
+                height: "24px",
+                width: "24px",
+                right: "25px",
+                top: "10px",
+              },
+              bmCross: {
+                height: "24px",
+                width: "3px",
+                background: "#ef0690",
+              },
+
+              bmItem: {
+                display: "inline-block",
+                textDecoration: "none",
+                marginBottom: "10px",
+                marginTop: "1em",
+                color: "#ef0690",
+                transition: "color 0.2s",
+                fontSize: "1.3em",
+              },
+              bmOverlay: {
+                background: "transparent",
+              },
+              bmItemList: {
+                paddingLeft: "45%", // Adjust this value as needed
+                margin: "0",
+                width: "50%",
+              },
+              bmBurgerButton: {
+                position: "fixed",
+                width: "100%",
+                height: "",
+                right: "-80%", // Adjust this to move the button to the right
+                top: "25px", // Adjust this to move the button down from the top
+              },
+            }}
+            right // This makes the menu appear from the right side
+            >
             {menuItems.map((item, index) => (
               <a key={index} href={item.href}>
                 {item.text}
