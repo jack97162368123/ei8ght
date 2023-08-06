@@ -44,7 +44,7 @@ module.exports = {
         pageTransitionDelay: 0,
         defer: false,
       },
-    }
+    },
 
     {
       resolve: `gatsby-plugin-robots-txt`,
