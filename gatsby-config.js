@@ -14,7 +14,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-image`,
-    `gatsby-plugin-sitemap`, 
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -23,10 +23,34 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Eight PR & Marketing`,
+        short_name: `EightPR`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#00c7ff`,
+        display: `minimal-ui`,
+        icon: `src/images/BodyImages/Favcon.png`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `G-ZQBC3VQ4GZ`,
+        head: false,
+        anonymize: true,
+        respectDNT: true,
+        pageTransitionDelay: 0,
+        defer: false,
+      },
+    }
+
+    {
       resolve: `gatsby-plugin-robots-txt`,
       options: {
-        host: `http://www.eightpr.co.uk`, 
-        sitemap: `http://www.eightpr.co.uk/sitemap.xml`, 
+        host: `http://www.eightpr.co.uk`,
+        sitemap: `http://www.eightpr.co.uk/sitemap.xml`,
         policy: [{ userAgent: '*', allow: '/' }]
       }
     }
