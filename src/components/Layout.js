@@ -14,6 +14,7 @@ import Footer from "./Footer";
 import ThreeColumnGrid from "./About/ThreeColumnGrid";
 import WelcomeEightComponent from "./WelcomeEightComponent";
 import Seo from "./seo.js";
+import CommingSoon from "./loading/CommingSoon";
 
 import "../styles/layout.css";
 import "../styles/grid.css";
@@ -72,7 +73,13 @@ const Layout = ({
       <div className="loading-component" style={{ opacity: opacity }}>
         <Loading />
       </div>
-    )}
+      )}
+      
+     (
+      <div className="coming-soon-component" style={{ position: 'fixed', width: '100%', height: '100%', zIndex: 9999 }}>
+        <CommingSoon />
+      </div>
+    )
     
       <div className="layout">
       
