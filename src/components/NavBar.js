@@ -115,7 +115,7 @@ const NavBar = () => {
       ) : (
         <nav className="nav">
           <div className="nav__logo">
-            <a href="#home"> {/* Linking the logo to the home section */}
+            <a href="#home"> 
               <img src={EightLogo} alt="Logo" className="nav__logo-desktop" />
             </a>
           </div>

@@ -3,12 +3,12 @@ import "../styles/ThreeColumnImageComponent.css";
 import ImageComponent from "./ImageComponent";
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Al from "../../static/profile-shots/Al.jpeg";
-import Person4 from "../../static/profile-shots/MikePic1.jpeg";
-import Person5 from "../../static/profile-shots/Unknown-1.jpeg";
-import Person2 from "../../static/profile-shots/Amber Pic.jpeg";
-import Person3 from "../../static/profile-shots/ClaireKenton.png";
-import Person6 from "../../static/profile-shots/Nyomi.png";
+import Al from "../images/profile-shots/Al.jpeg";
+import Person4 from "../images/profile-shots/MikePic1.jpeg";
+import Person5 from "../images/profile-shots/Unknown-1.jpeg";
+import Person2 from "../images/profile-shots/Amber Pic.jpeg";
+import Person3 from "../images/profile-shots/ClaireKenton.png";
+import Person6 from "../images/profile-shots/Nyomi.png";
 
 
 gsap.registerPlugin(ScrollTrigger);

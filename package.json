@@ -1,8 +1,8 @@
 {
-  "name": "eight-web",
+  "name": "EI8HT-WEB",
   "version": "1.0.0",
   "private": true,
-  "description": "eight-web",
+  "description": "EI8HT-WEB",
   "author": "Jack Robetson",
   "license": "MIT",
   "keywords": [
@@ -24,7 +24,9 @@
     "@mui/material": "^5.14.2",
     "babel-preset-gatsby": "^3.11.0",
     "gatsby": "^5.11.0",
+    "gatsby-plugin-google-analytics": "^5.11.0",
     "gatsby-plugin-image": "^3.11.0",
+    "gatsby-plugin-manifest": "^5.11.0",
     "gatsby-plugin-netlify": "^5.1.0",
     "gatsby-plugin-react-helmet": "^6.11.0",
     "gatsby-plugin-robots-txt": "^1.8.0",

@@ -19,15 +19,14 @@ import "../styles/layout.css";
 import "../styles/grid.css";
 import "swiper/swiper-bundle.css";
 
-import svgImage1 from "../../static/mostexciting.svg";
-import svgImage2 from "../../static/About_EIGHT.svg";
+import svgImage1 from "../images/BodyImages/mostexciting.svg";
+import svgImage2 from "../images/BodyImages/About_EIGHT.svg";
 
-import meetTheTeamImage from "../../static/meet-the-team.svg";
-import svgImage4 from "../../static/Experence.svg";
-import About_EIGHT from "../../static/About_EIGHT.svg";
+import meetTheTeamImage from "../images/BodyImages/meet-the-team.svg";
+import svgImage4 from "../images/BodyImages/Experence.svg";
+import About_EIGHT from "../images/BodyImages/About_EIGHT.svg";
 
 import Happy from "../images/TopImages/shutterstock_247713031.jpg";
-import TeamImage from "../images/TopImages/shutterstock_794460844.jpg";
 import svgImage5 from "../images/TopImages/Artboard 1.png";
 import Swote_Top from "../images/TopImages/Swote_Top.png";
 
@@ -150,7 +149,7 @@ const Layout = ({
           {imageColumn === "left" && (
             <div className="right-column">
               <ImageComponentHalf
-                src={TeamImage}
+                src={Happy}
                 alt="Meat the Team Image (Tug)"
               />
             </div>

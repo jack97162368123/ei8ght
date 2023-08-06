@@ -37,7 +37,7 @@ const Loading = ({ opacity }) => {
   };
 
   const animationContainerStyle = {
-    height: '80%', // Reserve 80% of the container's height for the animation
+    height: '100%', 
     width: '100%',
     display: 'flex',
     alignItems: 'center',

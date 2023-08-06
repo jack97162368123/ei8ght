@@ -20,10 +20,10 @@ const DesignBranding = () => {
       <PImageComponent src={Image1} alt="Desgin and Branding SVG" />
 
       <DBHalfWidthContainer>
-        This is design and branding EIGHT-style. Building on intelligence and audience insight before we let loose with the creatives.<br /> <br />
-        To do this takes an agency that understands the audiences you’re trying to reach, that make it their business to research who they are, what they care about - both at work and in their day to day lives.
+      This is design and branding EIGHT-style. Building on intelligence and audience insight before we let loose with the creatives.<br /> <br />
+      To do this takes an understanding of the audiences you’re trying to reach, researching who they are, what they care about - both at work and in their day to day lives.
         <br /> <br />
-        The role of brand is increasingly important when it comes to how event planners select the people that they choose to work with. They don’t just want expertise and experience, that’s a given, they want brand alignment and shared values too. EIGHT gets this.
+        The role of brand is increasingly important when it comes to how event planners select the people that they choose to work with. They don’t just want expertise and experience, they want brand alignment and shared values too. EIGHT gets this.
       </DBHalfWidthContainer>
 
       <DBHalfWidthContainer imageSrc={Image3}>
