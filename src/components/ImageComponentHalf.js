@@ -32,7 +32,6 @@ const ImageComponentHalf = ({ src, alt, type }) => {
       className="grid-item-half image-half"
       style={{
         opacity: 1,
-        transform: "translateY(50%)",
         transition: "transform 1.0s ease",
       }}
     >
