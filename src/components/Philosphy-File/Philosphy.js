@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import FullWidthVideo from "./FullWidthVideo";
 import "./../Philosphy-File/FullWidthVideo.css";
 import "./../../styles/layout.css";
@@ -9,11 +9,14 @@ import "./../Philosphy-File/Philosphy.css";
 import TitleAndLogos from "./TitleAndLogos";
 
 import videoSrc from "./../../images/Videos/Philosify.mp4";
+import thumbnailImage from "./../../images/Philosphy/PhPic.png";
+
 
 import Image1 from "./../../images/Philosphy/Image1.png";
 import Image2 from "./../../images/Philosphy/Image2.png";
 import Image3 from "./../../images/Philosphy/shutterstock_1034738296.jpg";
 import Image4 from "./../../images/Philosphy/Scottish-Event-Campus-during-COP26-November-2021-800x423-362d9c2b22.png";
+import logo from "./../../images/Philosphy/Logos/Logo.png";
 
 import Logo1 from "./../../images/Philosphy/Logos/EventFirst.png";
 import Divercity_Alliance from "./../../images/Philosphy/Logos/Divercity_Alliance.png";
@@ -37,6 +40,38 @@ const Philosphy = () => {
   ];
 
   const logos = [{ src: Logo1, alt: "Logo 1" }];
+
+  const videoObject = {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Showreel from Birmingham Event",
+    "description": "Highlights of the Birmingham event and history, evernyone is having fun at the B",
+    "thumbnailUrl": thumbnailImage, 
+    "uploadDate": "2023-08-05T08:00:00+08:00",
+    "duration": "PT1M33S",
+    "contentUrl": "/static/Philosify-bd65efb2724bcbd62159a84d2dddb6d2.mp4",  
+    "embedUrl": "https://www.eightpr.co.uk/static/Philosify-bd65efb2724bcbd62159a84d2dddb6d2.mp4",  
+    "publisher": {
+      "@type": "Organization",
+      "name": "EIGHT PR & Marketing",
+      "logo": {
+        "@type": "ImageObject",
+        "url": logo,  
+      },
+    },
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": { "@type": "http://schema.org/WatchAction" },
+      "userInteractionCount": "2347",
+    },
+  };
+  
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.innerHTML = JSON.stringify(videoObject);
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }, []);
 
   return (
     <div>

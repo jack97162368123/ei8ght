@@ -16,6 +16,7 @@ import WelcomeEightComponent from "./WelcomeEightComponent";
 import Seo from "./seo.js";
 import CommingSoon from "./loading/CommingSoon";
 
+import Sting from "../images/BodyImages/EIGHT_SOCIAL_Release_V1-06-08-23.mp4";
 import "../styles/layout.css";
 import "../styles/grid.css";
 import "swiper/swiper-bundle.css";
@@ -75,12 +76,12 @@ const Layout = ({
       </div>
       )}
       
-     (
+     {/* (
       <div className="coming-soon-component" style={{ position: 'fixed', width: '100%', height: '100%', zIndex: 9999 }}>
         <CommingSoon />
       </div>
     )
-    
+     */}
       <div className="layout">
       
 
@@ -106,13 +107,13 @@ const Layout = ({
 
           {paragraphColumn === "left" && (
             <div className="left-column">
-              <Paragraph text="A specialist PR & marketing agency working in the world of events and experience marketing. We exist because we love events, marketing, and live experiences. < br /> We talk about empathetic marketing; the creation of campaigns that take the time to understand audiences, their world, and their lives, and that build a closer connection with them. <br /> We talk about creativity; creating ideas, campaigns, and messages that create empathy and action. We exist in that sweet spot between events and brands, people and places, emotion, creativity, and intelligence." />
+              <Paragraph text="A specialist PR & marketing agency working in the world of events and experience marketing. We exist because we love events, marketing, and live experiences.  We talk about empathetic marketing; the creation of campaigns that take the time to understand audiences, their world, and their lives, and that build a closer connection with them. <br /> We talk about creativity; creating ideas, campaigns, and messages that create empathy and action. We exist in that sweet spot between events and brands, people and places, emotion, creativity, and intelligence." />
             </div>
           )}
 
           {imageColumn === "left" && (
             <div className="right-column">
-              <ImageComponentHalf src={Happy} alt="Alistair Turner" />
+<ImageComponentHalf src={Sting} alt="Sting" type="video" />
             </div>
           )}
 
