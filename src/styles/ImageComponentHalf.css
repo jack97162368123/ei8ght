@@ -2,10 +2,7 @@
     grid-column: span 2;
     grid-area: image;
     position: sticky;
-    top: 0;  /* distance from the top of the viewport */
     opacity: 0;
-    /* transform: translateY(50%); */
-    transition: opacity 0.5s ease, transform 0.5s ease;
   }
   
   
