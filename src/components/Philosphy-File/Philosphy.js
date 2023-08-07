@@ -16,7 +16,7 @@ import Image1 from "./../../images/Philosphy/Image1.png";
 import Image2 from "./../../images/Philosphy/Image2.png";
 import Image3 from "./../../images/Philosphy/shutterstock_1034738296.jpg";
 import Image4 from "./../../images/Philosphy/Scottish-Event-Campus-during-COP26-November-2021-800x423-362d9c2b22.png";
-import logo from "./../../images/Philosphy/Logos/Logo.png";
+import logo from "../../images/Philosphy/Logos/Logo.png";
 
 import Logo1 from "./../../images/Philosphy/Logos/EventFirst.png";
 import Divercity_Alliance from "./../../images/Philosphy/Logos/Divercity_Alliance.png";
