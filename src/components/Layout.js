@@ -76,11 +76,11 @@ const Layout = ({
       </div>
       )}
       
-     {/* (
+     (
       <div className="coming-soon-component" style={{ position: 'fixed', width: '100%', height: '100%', zIndex: 9999 }}>
         <CommingSoon />
       </div>
-    ) */}
+    )
     
       <div className="layout">
       
@@ -191,11 +191,11 @@ const Layout = ({
             <ThreeColumnGrid />
           </div>
 
-          <div className="full-width-column" colSpan="2">
-            <div className="layout">
-              <main>{children}</main>
+          <div className="Bottom-footer" colSpan="2">
+           
+        
               <Footer />
-            </div>
+            
           </div>
         </div>
       </main>

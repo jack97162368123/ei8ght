@@ -74,6 +74,16 @@ html {
   background-color: rgba(255, 255, 255, 0.8); /* Optional: semi-transparent background */
 }
 
+.Bottom-footer{
+  position: relative;
+
+  z-index: 500;
+  min-width: 85vw;
+
+
+}
+
+
 
 
 .footer {
@@ -87,6 +97,7 @@ html {
   align-items: center; /* keep this line */
   padding: 20px; /* keep this line */
   flex-wrap: wrap; /* keep this line */
+  z-index: 1;
 }
 
 
@@ -114,7 +125,7 @@ html {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  
+  z-index: 500;
 }
 
 .footer-text {
@@ -150,6 +161,7 @@ html {
   margin-top: 10px;
   width: 20%;
 text-align: center;
+z-index: 1;
 }
 
 .phone-number {

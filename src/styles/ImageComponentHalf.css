@@ -38,7 +38,6 @@
     bottom: 0;
     width: 100%;
     height: auto;
-    /* preserveAspectRatio: none; This can be necessary for correct scaling of SVGs */
 }
   
   @media (max-width: 768px) {
