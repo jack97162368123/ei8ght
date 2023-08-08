@@ -191,11 +191,11 @@ const Layout = ({
             <ThreeColumnGrid />
           </div>
 
-          <div className="Bottom-footer" colSpan="2">
-           
-        
+          <div className="full-width-column" colSpan="2">
+            <div className="layout">
+              <main>{children}</main>
               <Footer />
-            
+            </div>
           </div>
         </div>
       </main>
