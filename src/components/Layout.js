@@ -90,7 +90,7 @@ const Layout = ({
         description="EIGHT PR & Marketing is a specialist agency with a mission to blend business with pleasure in the realm of events and experience marketing. Our focus is empathetic marketing and creative campaigns that connect deeply with audiences. EIGHT is more than a number, it's a club, a network, and a promise of quality and connection."
         />
         <NavBar />
-      <Bg />
+        <Bg />
       
       
       <main id="home" className="content">
@@ -194,7 +194,8 @@ const Layout = ({
           <div className="full-width-column" colSpan="2">
             <div className="layout">
               <main>{children}</main>
-              <Footer />
+                <Footer />
+              
             </div>
           </div>
         </div>
